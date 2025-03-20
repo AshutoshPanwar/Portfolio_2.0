@@ -1,0 +1,39 @@
+.projects {
+	padding: 20px;
+	text-align: center;
+}
+
+.project-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+}
+
+.project-card {
+	background-color: white;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 20px;
+	width: 300px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+	margin: 0 0 10px;
+}
+
+.project-card p {
+	margin: 5px 0;
+}
+
+.project-card a {
+	display: inline-block;
+	margin-top: 10px;
+	color: #007bff;
+	text-decoration: none;
+}
+
+.project-card a:hover {
+	text-decoration: underline;
+}
