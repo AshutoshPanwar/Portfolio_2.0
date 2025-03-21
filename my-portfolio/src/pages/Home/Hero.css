@@ -11,6 +11,7 @@
 .hero-content {
 	max-width: 1200px;
 	width: 100%;
+	text-align: left; /* Ensure all content is left-aligned */
 }
 
 .hero-content h1 {
@@ -18,14 +19,12 @@
 	font-weight: bold;
 	line-height: 1.2;
 	margin: 0;
-	text-align: left; /* Ensure text is left-aligned */
 }
 
 .hero-subtext {
 	font-size: 1.5rem;
 	margin-top: 1rem;
 	color: #ccc; /* Light gray for subtext */
-	text-align: left; /* Ensure text is left-aligned */
 }
 
 .gradient-text {
@@ -45,7 +44,9 @@
 	cursor: pointer;
 	margin-top: 2rem;
 	transition: background-color 0.3s ease;
-	text-align: left; /* Ensure button text is left-aligned */
+	display: block; /* Make the button a block element */
+	width: fit-content; /* Adjust width to fit content */
+	text-align: center; /* Center text inside the button */
 }
 
 .cta-button:hover {
@@ -56,7 +57,6 @@
 	font-size: 1rem;
 	margin-top: 1rem;
 	color: #888; /* Light gray for note */
-	text-align: left; /* Ensure text is left-aligned */
 }
 
 /* Responsive Typography */
