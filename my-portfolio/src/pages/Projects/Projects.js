@@ -1,99 +1,143 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Code, LineChart, Brain, Eye } from "lucide-react"; // Import Lucide icons
+import { Code, LineChart, Brain, Eye, Github } from "lucide-react"; // Import Lucide icons
 import "./Projects.css"; // Import the CSS file
 
 const Projects = () => {
 	const projects = [
 		{
 			id: 1,
-			title: "Customer Churn Prediction",
+			title: "Incident Management System",
 			description:
-				"Built a machine learning model to predict customer churn using Python and Scikit-learn.",
-			tools: "Python, Pandas, Scikit-learn, Matplotlib",
-			link: "https://github.com/yourusername/customer-churn-prediction",
-			icon: <Brain className="project-icon" />, // Icon for machine learning
-		},
-		{
-			id: 2,
-			title: "Sentiment Analysis on Twitter Data",
-			description:
-				"Performed sentiment analysis on Twitter data using Natural Language Processing (NLP) techniques.",
-			tools: "Python, NLTK, TensorFlow, Flask",
-			link: "https://github.com/yourusername/sentiment-analysis",
+				"A REST API built using Django Rest Framework and MySQL for handling user incidents with a super admin panel.",
+			skills: ["Django", "REST API", "MySQL", "Python"],
+			link: "#",
 			icon: <Code className="project-icon" />, // Icon for coding
 		},
 		{
-			id: 3,
-			title: "Sales Data Visualization Dashboard",
+			id: 2,
+			title: "Boston Housing Price Prediction",
 			description:
-				"Created an interactive dashboard to visualize sales data using Tableau.",
-			tools: "Tableau, SQL, Excel",
-			link: "https://public.tableau.com/yourdashboard",
+				"A machine learning model using linear regression to predict housing prices based on the Boston dataset.",
+			skills: [
+				"Machine Learning",
+				"Linear Regression",
+				"Python",
+				"Scikit-Learn",
+			],
+			link: "#",
+			icon: <Brain className="project-icon" />, // Icon for machine learning
+		},
+		{
+			id: 3,
+			title: "Portfolio Website",
+			description:
+				"A modern, visually appealing portfolio website built with React.js to showcase my work in data science.",
+			skills: ["React", "Tailwind CSS", "JavaScript"],
+			link: "#",
 			icon: <LineChart className="project-icon" />, // Icon for data visualization
 		},
 	];
 
 	return (
 		<motion.section
-			className="about-section" // Reuse the about-section class for consistent background
+			className="projects-section" // Updated class name
 			initial={{ opacity: 0, y: 50 }}
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration: 1 }}
 		>
 			{/* Punchline Heading */}
 			<motion.div
-				className="about-heading-container"
+				className="projects-heading-container"
 				initial={{ opacity: 0, y: -50 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ delay: 0.2, duration: 1 }}
 			>
-				<h1 className="about-heading">Bringing Visions to Reality.</h1>
+				<h1 className="projects-heading">My Projects</h1>
 			</motion.div>
 
-			{/* Projects List */}
+			{/* Introduction Section */}
 			<motion.div
-				className="about-content"
+				className="projects-intro"
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ delay: 0.5, duration: 1 }}
 			>
-				<motion.div
-					className="about-services"
-					initial={{ opacity: 0 }}
-					animate={{ opacity: 1 }}
-					transition={{ delay: 1, duration: 1 }}
-				>
-					{projects.map(project => (
+				<p className="intro-text">
+					Every project I work on is a step forward in mastering data
+					science and technology. From predictive analytics to
+					real-world automation, my work is driven by curiosity and
+					precision. Here, you’ll find a showcase of my best projects,
+					where complex problems meet innovative solutions.
+				</p>
+			</motion.div>
+
+			{/* Projects List */}
+			<motion.div
+				className="projects-content"
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ delay: 1.5, duration: 1 }} // Delay to show after intro
+			>
+				<div className="projects-grid">
+					{projects.map((project, index) => (
 						<motion.div
 							key={project.id}
-							className="service-card"
+							className={`project-card ${
+								index % 2 !== 0 ? "reverse" : ""
+							}`} // Add "reverse" class for alternating rows
 							whileHover={{ scale: 1.05 }}
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.5 }}
 						>
-							<div className="project-icon-container">
-								{project.icon} {/* Render the icon */}
+							<div className="project-image">
+								<span className="image-placeholder">
+									Project Image
+								</span>
 							</div>
-							<h3>{project.title}</h3>
-							<p>{project.description}</p>
-							<p className="project-tools">
-								<strong>Tools:</strong> {project.tools}
-							</p>
-							<a
-								href={project.link}
-								target="_blank"
-								rel="noopener noreferrer"
-								className="project-link"
-							>
-								<Eye className="view-icon" />{" "}
-								{/* Icon for "View Project" */}
-								View Project
-							</a>
+							<div className="project-details">
+								<div className="project-icon-container">
+									{project.icon} {/* Render the icon */}
+								</div>
+								<h3>{project.title}</h3>
+								<p>{project.description}</p>
+								<div className="project-skills">
+									{project.skills.map((skill, index) => (
+										<span key={index} className="skill-tag">
+											{skill}
+										</span>
+									))}
+								</div>
+								<a
+									href={project.link}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="project-link"
+								>
+									<Eye className="view-icon" /> View Project
+								</a>
+							</div>
 						</motion.div>
 					))}
-				</motion.div>
+				</div>
+			</motion.div>
+
+			{/* More Projects Button */}
+			<motion.div
+				className="more-projects-button-container"
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ delay: 2, duration: 1 }} // Delay to show after projects
+			>
+				<a
+					href="https://github.com/yourusername" // Replace with your GitHub URL
+					target="_blank"
+					rel="noopener noreferrer"
+					className="more-projects-button"
+				>
+					<Github className="github-icon" /> More Projects on GitHub
+				</a>
 			</motion.div>
 		</motion.section>
 	);

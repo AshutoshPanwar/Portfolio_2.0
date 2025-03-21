@@ -1,20 +1,21 @@
-/* Skills.css */
-/* Reuse the About.css styles for consistency */
-.about-section {
+/* Full-Screen Heading */
+.fullscreen-heading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh; /* Cover the entire screen */
 	background-color: #000; /* Black background */
 	color: #fff; /* White text */
-	padding: 4rem 2rem;
-	text-align: center; /* Center-align the rest of the content */
+	text-align: center;
 }
 
-.about-heading-container {
+.heading-container {
 	width: 100%;
 	text-align: left; /* Left-align the punchline heading */
-	margin-bottom: 2rem;
 	padding-left: 2rem; /* Add some padding to align with the content */
 }
 
-.about-heading {
+.main-heading {
 	font-size: clamp(8vw, 15vw, 18vw); /* Responsive font size */
 	font-weight: 900;
 	letter-spacing: -2px;
@@ -30,23 +31,35 @@
 	align-items: flex-start; /* Left-align the words */
 }
 
-.about-heading span {
+.main-heading span {
 	display: block; /* Ensure each word is on a new line */
 }
 
-.about-content {
+/* Sections */
+.section {
+	padding: 4rem 2rem;
+	background-color: #000; /* Black background */
+	color: #fff; /* White text */
+	text-align: center;
+}
+
+.section h2 {
+	font-size: 2.5rem;
+	margin-bottom: 2rem;
+	color: #ff7e5f; /* Gradient color for heading */
+}
+
+/* Skills Container */
+.skills-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1.5rem; /* Space between cards */
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 2rem; /* Add padding to align with the punchline */
 }
 
-.about-services {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	gap: 1.5rem; /* Space between cards */
-}
-
-.service-card {
+.skill-card {
 	background-color: #1a1a1a; /* Slightly lighter black background */
 	padding: 1.5rem;
 	border-radius: 8px;
@@ -54,50 +67,208 @@
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-card:hover {
+.skill-card:hover {
 	transform: translateY(-10px); /* Lift on hover */
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
 }
 
-.service-card h3 {
+.skill-card h3 {
 	font-size: 1.5rem;
 	margin-bottom: 1rem;
 	color: #ff7e5f; /* Gradient color for heading */
 }
 
-.service-card ul {
+.skill-card ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
 }
 
-.service-card li {
+.skill-card li {
 	font-size: 1rem;
 	color: #ccc; /* Light gray for list items */
 	margin-bottom: 0.5rem;
 }
 
+/* Certifications and Interests Sections */
+/* Certifications Container */
+.certifications-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 1.5rem; /* Space between cards */
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+/* Certification Card */
+.certification-card {
+	background-color: #1a1a1a; /* Slightly lighter black background */
+	border-radius: 8px;
+	overflow: hidden; /* Ensure image doesn't overflow */
+	text-decoration: none; /* Remove underline from link */
+	color: #fff; /* White text */
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-card:hover {
+	transform: translateY(-10px); /* Lift on hover */
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Certification Image */
+.certification-image {
+	width: 100%;
+	height: 200px;
+	object-fit: cover; /* Ensure image covers the area */
+}
+
+/* Certification Details */
+/* Certifications Container */
+.certifications-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 1.5rem; /* Space between cards */
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+/* Certification Card */
+.certification-card {
+	background-color: #1a1a1a; /* Slightly lighter black background */
+	border-radius: 8px;
+	overflow: hidden; /* Ensure image doesn't overflow */
+	text-decoration: none; /* Remove underline from link */
+	color: #fff; /* White text */
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	text-align: left; /* Left-align all text inside the card */
+}
+
+.certification-card:hover {
+	transform: translateY(-10px); /* Lift on hover */
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Certification Image */
+.certification-image {
+	width: 100%;
+	height: 200px;
+	object-fit: cover; /* Ensure image covers the area */
+}
+
+/* Certification Details */
+.certification-details {
+	padding: 1.5rem;
+	text-align: left; /* Ensure text inside details is left-aligned */
+}
+
+.certification-details h3 {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	color: #ff7e5f; /* Gradient color for heading */
+}
+
+.certification-details p {
+	font-size: 1rem;
+	color: #ccc; /* Light gray for description */
+	line-height: 1.6;
+	margin: 0; /* Remove default margin */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
-	.about-heading {
+	.certifications-container {
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	}
+}
+
+@media (max-width: 480px) {
+	.certifications-container {
+		grid-template-columns: 1fr; /* 1 card per row on mobile */
+	}
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.main-heading {
 		font-size: clamp(10vw, 12vw, 15vw); /* Shrinks dynamically */
 	}
 
-	.about-services {
+	.skills-container {
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	}
 }
 
 @media (max-width: 480px) {
-	.about-heading {
+	.main-heading {
 		font-size: clamp(12vw, 14vw, 16vw); /* Further adjusted for mobile */
 	}
 
-	.about-services {
+	.skills-container {
 		grid-template-columns: 1fr; /* 1 card per row on mobile */
 	}
 
-	.about-heading-container {
+	.heading-container {
 		padding-left: 1rem; /* Adjust padding for smaller screens */
+	}
+}
+
+/* Hobbies Container */
+.hobbies-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1.5rem; /* Space between cards */
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+/* Hobby Card */
+.hobby-card {
+	background-color: #1a1a1a; /* Slightly lighter black background */
+	border-radius: 8px;
+	padding: 1.5rem;
+	text-align: center; /* Center-align icon and text */
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-card:hover {
+	transform: translateY(-10px); /* Lift on hover */
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Hobby Icon */
+.hobby-icon {
+	margin-bottom: 1rem;
+}
+
+/* Hobby Details */
+.hobby-details {
+	text-align: left; /* Left-align text */
+}
+
+.hobby-details h3 {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	color: #ff7e5f; /* Gradient color for heading */
+}
+
+.hobby-details p {
+	font-size: 1rem;
+	color: #ccc; /* Light gray for description */
+	line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.hobbies-container {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	}
+}
+
+@media (max-width: 480px) {
+	.hobbies-container {
+		grid-template-columns: 1fr; /* 1 card per row on mobile */
 	}
 }
