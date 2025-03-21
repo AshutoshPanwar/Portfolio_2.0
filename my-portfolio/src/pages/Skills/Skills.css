@@ -1,80 +1,103 @@
 /* Skills.css */
-.skills {
-	background-color: #1a1a1a; /* Dark background */
-	color: white;
+/* Reuse the About.css styles for consistency */
+.about-section {
+	background-color: #000; /* Black background */
+	color: #fff; /* White text */
 	padding: 4rem 2rem;
-	text-align: center;
+	text-align: center; /* Center-align the rest of the content */
 }
 
-.skills h2 {
-	font-size: 2.5rem;
+.about-heading-container {
+	width: 100%;
+	text-align: left; /* Left-align the punchline heading */
 	margin-bottom: 2rem;
+	padding-left: 2rem; /* Add some padding to align with the content */
+}
+
+.about-heading {
+	font-size: clamp(8vw, 15vw, 18vw); /* Responsive font size */
+	font-weight: 900;
+	letter-spacing: -2px;
+	line-height: 0.9;
+	text-transform: uppercase;
 	background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Gradient text */
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
+	margin: 0; /* Remove default margin */
+	display: flex;
+	flex-direction: column; /* Stack words vertically */
+	align-items: flex-start; /* Left-align the words */
 }
 
-.skills-list {
-	display: grid;
-	grid-template-columns: repeat(
-		auto-fit,
-		minmax(250px, 1fr)
-	); /* Responsive grid */
-	gap: 2rem; /* Space between categories */
+.about-heading span {
+	display: block; /* Ensure each word is on a new line */
+}
+
+.about-content {
 	max-width: 1200px;
 	margin: 0 auto;
+	padding: 0 2rem; /* Add padding to align with the punchline */
 }
 
-.skill-category {
-	background-color: #2a2a2a; /* Slightly lighter background */
+.about-services {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1.5rem; /* Space between cards */
+}
+
+.service-card {
+	background-color: #1a1a1a; /* Slightly lighter black background */
 	padding: 1.5rem;
 	border-radius: 8px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.skill-category:hover {
+.service-card:hover {
 	transform: translateY(-10px); /* Lift on hover */
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
 }
 
-.skill-category h3 {
+.service-card h3 {
 	font-size: 1.5rem;
 	margin-bottom: 1rem;
-	color: #ff7e5f; /* Gradient color for category title */
+	color: #ff7e5f; /* Gradient color for heading */
 }
 
-.skill-category ul {
+.service-card ul {
 	list-style: none;
 	padding: 0;
+	margin: 0;
 }
 
-.skill-category li {
+.service-card li {
 	font-size: 1rem;
-	margin-bottom: 0.75rem;
-	color: #ccc; /* Light gray for skill items */
+	color: #ccc; /* Light gray for list items */
+	margin-bottom: 0.5rem;
 }
 
-/* Responsive Styles */
+/* Responsive Design */
 @media (max-width: 768px) {
-	.skills h2 {
-		font-size: 2rem;
+	.about-heading {
+		font-size: clamp(10vw, 12vw, 15vw); /* Shrinks dynamically */
 	}
 
-	.skills-list {
-		grid-template-columns: repeat(
-			auto-fit,
-			minmax(200px, 1fr)
-		); /* Adjust grid for smaller screens */
-		gap: 1.5rem;
+	.about-services {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	}
+}
+
+@media (max-width: 480px) {
+	.about-heading {
+		font-size: clamp(12vw, 14vw, 16vw); /* Further adjusted for mobile */
 	}
 
-	.skill-category h3 {
-		font-size: 1.25rem;
+	.about-services {
+		grid-template-columns: 1fr; /* 1 card per row on mobile */
 	}
 
-	.skill-category li {
-		font-size: 0.9rem;
+	.about-heading-container {
+		padding-left: 1rem; /* Adjust padding for smaller screens */
 	}
 }

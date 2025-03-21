@@ -1,7 +1,7 @@
 /* About.css */
 .about-section {
-	background-color: #1a1a1a; /* Dark background */
-	color: white; /* Light text */
+	background-color: #000; /* Black background */
+	color: #fff; /* White text */
 	padding: 4rem 2rem;
 	text-align: center;
 }
@@ -48,7 +48,7 @@
 }
 
 .service-card {
-	background-color: #2a2a2a; /* Slightly lighter background */
+	background-color: #1a1a1a; /* Slightly lighter black background */
 	padding: 1.5rem;
 	border-radius: 8px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */

@@ -1,5 +1,6 @@
 import React from "react";
-import "./Projects.css"; // Optional: For styling
+import { motion } from "framer-motion";
+import "./Projects.css"; // Import the CSS file
 
 const Projects = () => {
 	const projects = [
@@ -30,27 +31,62 @@ const Projects = () => {
 	];
 
 	return (
-		<section className="projects">
-			<h2>My Projects</h2>
-			<div className="project-list">
-				{projects.map(project => (
-					<div key={project.id} className="project-card">
-						<h3>{project.title}</h3>
-						<p>{project.description}</p>
-						<p>
-							<strong>Tools:</strong> {project.tools}
-						</p>
-						<a
-							href={project.link}
-							target="_blank"
-							rel="noopener noreferrer"
+		<motion.section
+			className="about-section" // Reuse the about-section class for consistent background
+			initial={{ opacity: 0, y: 50 }}
+			animate={{ opacity: 1, y: 0 }}
+			transition={{ duration: 1 }}
+		>
+			{/* Punchline Heading */}
+			<motion.div
+				className="about-heading-container"
+				initial={{ opacity: 0, y: -50 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ delay: 0.2, duration: 1 }}
+			>
+				<h1 className="about-heading">Bringing Visions to Reality.</h1>
+			</motion.div>
+
+			{/* Projects List */}
+			<motion.div
+				className="about-content"
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ delay: 0.5, duration: 1 }}
+			>
+				<motion.div
+					className="about-services"
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ delay: 1, duration: 1 }}
+				>
+					{projects.map(project => (
+						<motion.div
+							key={project.id}
+							className="service-card"
+							whileHover={{ scale: 1.05 }}
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.5 }}
 						>
-							View Project
-						</a>
-					</div>
-				))}
-			</div>
-		</section>
+							<h3>{project.title}</h3>
+							<p>{project.description}</p>
+							<p className="project-tools">
+								<strong>Tools:</strong> {project.tools}
+							</p>
+							<a
+								href={project.link}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="project-link"
+							>
+								View Project
+							</a>
+						</motion.div>
+					))}
+				</motion.div>
+			</motion.div>
+		</motion.section>
 	);
 };
 

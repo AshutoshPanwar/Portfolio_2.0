@@ -1,0 +1,74 @@
+/* Contact.css */
+.contact-form {
+	background-color: #1a1a1a;
+	padding: 2rem;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.contact-form h3 {
+	font-size: 2rem;
+	margin-bottom: 1.5rem;
+	color: #ff7e5f;
+	text-align: center;
+}
+
+.form-fields {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.form-input,
+.form-textarea {
+	width: 100%;
+	padding: 0.75rem;
+	border-radius: 4px;
+	border: 1px solid #333;
+	background-color: #262626;
+	color: #fff;
+	font-size: 1rem;
+}
+
+.form-textarea {
+	resize: vertical;
+}
+
+.form-button {
+	background: linear-gradient(45deg, #ff7e5f, #feb47b);
+	color: #fff;
+	font-size: 1rem;
+	font-weight: bold;
+	padding: 0.75rem;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: opacity 0.3s ease;
+}
+
+.form-button:hover {
+	opacity: 0.9;
+}
+
+.social-links {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.social-link {
+	color: #ccc;
+	transition: color 0.3s ease;
+}
+
+.social-link:hover {
+	color: #ff7e5f;
+}
+
+.social-icon {
+	width: 2rem;
+	height: 2rem;
+}
