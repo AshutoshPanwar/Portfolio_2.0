@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Code, LineChart, Brain, Eye } from "lucide-react"; // Import Lucide icons
 import "./Projects.css"; // Import the CSS file
 
 const Projects = () => {
@@ -11,6 +12,7 @@ const Projects = () => {
 				"Built a machine learning model to predict customer churn using Python and Scikit-learn.",
 			tools: "Python, Pandas, Scikit-learn, Matplotlib",
 			link: "https://github.com/yourusername/customer-churn-prediction",
+			icon: <Brain className="project-icon" />, // Icon for machine learning
 		},
 		{
 			id: 2,
@@ -19,6 +21,7 @@ const Projects = () => {
 				"Performed sentiment analysis on Twitter data using Natural Language Processing (NLP) techniques.",
 			tools: "Python, NLTK, TensorFlow, Flask",
 			link: "https://github.com/yourusername/sentiment-analysis",
+			icon: <Code className="project-icon" />, // Icon for coding
 		},
 		{
 			id: 3,
@@ -27,6 +30,7 @@ const Projects = () => {
 				"Created an interactive dashboard to visualize sales data using Tableau.",
 			tools: "Tableau, SQL, Excel",
 			link: "https://public.tableau.com/yourdashboard",
+			icon: <LineChart className="project-icon" />, // Icon for data visualization
 		},
 	];
 
@@ -69,6 +73,9 @@ const Projects = () => {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.5 }}
 						>
+							<div className="project-icon-container">
+								{project.icon} {/* Render the icon */}
+							</div>
 							<h3>{project.title}</h3>
 							<p>{project.description}</p>
 							<p className="project-tools">
@@ -80,6 +87,8 @@ const Projects = () => {
 								rel="noopener noreferrer"
 								className="project-link"
 							>
+								<Eye className="view-icon" />{" "}
+								{/* Icon for "View Project" */}
 								View Project
 							</a>
 						</motion.div>

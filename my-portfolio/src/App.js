@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
+import TalkComponent from "./components/TalkComponent"; // Import the Navbar component
 import Navbar from "./components/Navbar/Navbar"; // Import the Navbar component
 import Footer from "./components/Footer/Footer"; // Import the Footer component
 import Hero from "./pages/Home/Hero"; // Import Home page
@@ -25,6 +26,7 @@ function App() {
 					<Route path="/contact" element={<Contact />} />{" "}
 					{/* Contact page */}
 				</Routes>
+				<TalkComponent />
 				{/* <Footer /> */}
 			</div>
 		</Router>

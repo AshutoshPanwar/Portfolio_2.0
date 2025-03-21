@@ -1,0 +1,55 @@
+/* General Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Base Container Styling */
+.talk-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50vh; /* Half viewport height for each section */
+	overflow: hidden;
+}
+
+/* Base Text Styling */
+.talk-text {
+	white-space: nowrap; /* Prevent text from wrapping */
+	font-family: "Arial", sans-serif; /* Bold sans-serif font */
+	font-weight: bold;
+	text-transform: uppercase; /* Uppercase for modern feel */
+	font-size: 8vw; /* Responsive font size based on viewport width */
+}
+
+/* Darker Contrast Section */
+.talk-container.darker {
+	background-color: #000; /* Dark background */
+}
+
+.talk-container.darker .talk-text {
+	color: #fff; /* Bright white text */
+}
+
+/* Lighter Contrast Section */
+.talk-container.lighter {
+	background-color: #f0f0f0; /* Light background */
+}
+
+.talk-container.lighter .talk-text {
+	color: #333; /* Dark gray text */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+	.talk-text {
+		font-size: 6vw; /* Smaller font size for smaller screens */
+	}
+}
+
+@media (max-width: 480px) {
+	.talk-text {
+		font-size: 4vw; /* Even smaller font size for mobile devices */
+	}
+}

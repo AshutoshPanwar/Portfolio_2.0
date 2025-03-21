@@ -37,6 +37,40 @@
 	margin-bottom: 2rem;
 }
 
+/* My Story Section */
+.about-story,
+.about-certifications,
+.about-education {
+	margin-bottom: 3rem;
+}
+
+.about-story h2,
+.about-certifications h2,
+.about-education h2 {
+	font-size: 2rem;
+	color: #ff7e5f; /* Gradient color for heading */
+	margin-bottom: 1rem;
+}
+
+.about-story p,
+.about-certifications ul,
+.about-education ul {
+	font-size: 1.1rem;
+	color: #ccc; /* Light gray for text */
+	line-height: 1.6;
+}
+
+.about-certifications ul,
+.about-education ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.about-certifications li,
+.about-education li {
+	margin-bottom: 0.5rem;
+}
+
 /* Services Section */
 .about-services {
 	display: grid;
