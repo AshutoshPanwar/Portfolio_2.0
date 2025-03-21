@@ -1,32 +1,31 @@
-// App.js
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar"; // Import the Navbar component
-import { Home } from "lucide-react";
+import Navbar from "./components/Navbar/Navbar"; // Import the Navbar component
+import Footer from "./components/Footer/Footer"; // Import the Footer component
+import Hero from "./pages/Home/Hero"; // Import Home page
+import About from "./pages/About/About"; // Import About page
+import Skills from "./pages/Skills/Skills"; // Import Skills page
+import Projects from "./pages/Projects/Projects"; // Import Projects page
+import Contact from "./pages/Contact/Contact"; // Import Contact page
 
 function App() {
 	return (
 		<Router>
 			<div className="App">
-				<Navbar /> {/* Use the Navbar component here */}
-				{/* <Header /> */}
+				<Navbar /> {/* Navbar at the top */}
 				<Routes>
-					<Route path="/" element={<Hero />} />{" "}
-					{/* Home page shows Projects */}
-					<Route path="/projects" element={<Projects />} />
-					<Route path="/skills" element={<Skills />} />
-					<Route path="/about" element={<About />} />
-					<Route path="/contact" element={<Contact />} />
+					<Route path="/" element={<Hero />} /> {/* Home page */}
+					<Route path="/about" element={<About />} />{" "}
+					{/* About page */}
+					<Route path="/skills" element={<Skills />} />{" "}
+					{/* Skills page */}
+					<Route path="/projects" element={<Projects />} />{" "}
+					{/* Projects page */}
+					<Route path="/contact" element={<Contact />} />{" "}
+					{/* Contact page */}
 				</Routes>
-				<Footer />
+				<Footer /> {/* Footer at the bottom */}
 			</div>
 		</Router>
 	);
