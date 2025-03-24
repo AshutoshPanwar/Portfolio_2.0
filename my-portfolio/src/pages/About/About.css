@@ -37,38 +37,81 @@
 	margin-bottom: 2rem;
 }
 
-/* My Story Section */
-.about-story,
-.about-certifications,
-.about-education {
-	margin-bottom: 3rem;
+/* Who We Are Section */
+.who-we-are-container,
+.my-story-container,
+.my-mission-container {
+	display: flex;
+	align-items: first baseline;
+	justify-content: space-between;
+	gap: 4rem;
+	padding: 4rem 2rem;
+	background-color: #000; /* Black background */
+	color: #fff; /* White text */
 }
 
-.about-story h2,
-.about-certifications h2,
-.about-education h2 {
-	font-size: 2rem;
-	color: #ff7e5f; /* Gradient color for heading */
-	margin-bottom: 1rem;
+.who-we-are-left,
+.my-story-left,
+.my-mission-left {
+	flex: 1;
 }
 
-.about-story p,
-.about-certifications ul,
-.about-education ul {
-	font-size: 1.1rem;
-	color: #ccc; /* Light gray for text */
-	line-height: 1.6;
+.who-we-are-left h2,
+.my-story-left h2,
+.my-mission-left h2 {
+	font-size: clamp(4rem, 8vw, 10rem); /* Responsive font size */
+	font-weight: 900;
+	line-height: 1;
+	text-transform: uppercase;
+	text-align: left;
+	color: #fff; /* White text */
 }
 
-.about-certifications ul,
-.about-education ul {
-	list-style-type: none;
-	padding: 0;
+.who-we-are-right,
+.my-story-right,
+.my-mission-right {
+	flex: 1;
 }
 
-.about-certifications li,
-.about-education li {
-	margin-bottom: 0.5rem;
+.who-we-are-right p,
+.my-story-right p,
+.my-mission-right p {
+	font-size: 1.2rem;
+	text-align: left;
+	line-height: 1.8;
+	color: #ccc; /* Light gray text */
+}
+
+.who-we-are-right strong,
+.my-story-right strong,
+.my-mission-right strong {
+	color: #fff; /* White text for emphasis */
+	font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.who-we-are-container,
+	.my-story-container,
+	.my-mission-container {
+		flex-direction: column; /* Stack on smaller screens */
+		gap: 2rem;
+		padding: 2rem;
+	}
+
+	.who-we-are-left h2,
+	.my-story-left h2,
+	.my-mission-left h2 {
+		font-size: clamp(3rem, 6vw, 8rem); /* Adjust font size for mobile */
+		text-align: center; /* Center text on mobile */
+	}
+
+	.who-we-are-right p,
+	.my-story-right p,
+	.my-mission-right p {
+		font-size: 1rem; /* Adjust text size for mobile */
+		text-align: center; /* Center text on mobile */
+	}
 }
 
 /* Services Section */

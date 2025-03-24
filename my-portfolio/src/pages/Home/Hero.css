@@ -59,7 +59,146 @@
 	color: #888; /* Light gray for note */
 }
 
-/* Responsive Typography */
+/* Skill Section */
+.skills-section {
+	background-color: #000; /* Match Hero Section background */
+	color: #fff; /* White text */
+	padding: 80px 40px;
+}
+
+.skills-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 40px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.left-column {
+	flex: 1;
+	max-width: 600px;
+}
+
+.skills-headline {
+	font-size: 4rem;
+	font-weight: bold;
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+.right-column {
+	flex: 1;
+	max-width: 600px;
+	text-align: left;
+}
+
+.skills-description {
+	font-size: 1.2rem;
+	line-height: 1.6;
+	color: #ccc; /* Light gray for subtext */
+}
+
+/* Skill Cards */
+.skill-cards-container {
+	width: 100%;
+	overflow: hidden;
+	margin-top: 60px;
+	position: relative;
+}
+
+.skill-cards-wrapper {
+	display: flex;
+	gap: 20px;
+	width: max-content;
+}
+
+.skill-card {
+	background-color: #1a1a1a; /* Dark card background */
+	border-radius: 10px;
+	padding: 20px;
+	width: 250px;
+	text-align: center;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	flex-shrink: 0;
+}
+
+.skill-icon {
+	color: #ff7e5f; /* Gradient color for icons */
+	margin-bottom: 15px;
+}
+
+.skill-title {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 10px;
+	color: #fff; /* White text */
+}
+
+.skill-description {
+	font-size: 1rem;
+	color: #ccc; /* Light gray for subtext */
+}
+
+/* Arrow Buttons */
+.arrow-buttons {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: space-between;
+	transform: translateY(-50%);
+	z-index: 1;
+}
+
+.arrow-button {
+	background-color: #ff7e5f; /* Gradient color for buttons */
+	color: #000;
+	border: none;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	font-size: 1.5rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.arrow-button:hover {
+	background-color: #feb47b; /* Gradient hover color */
+	transform: scale(1.1);
+}
+
+/* Button at the bottom of the cards */
+.button-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+}
+
+.cta-button {
+	padding: 16px 32px;
+	background-color: #ff7e5f; /* Gradient color for button */
+	color: #000;
+	border: none;
+	border-radius: 50px;
+	font-size: 1.2rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+	background-color: #feb47b; /* Gradient hover color */
+	transform: scale(1.1);
+}
+
+/* Responsive Design */
 @media (max-width: 1200px) {
 	.hero-content h1 {
 		font-size: 5rem; /* Slightly smaller font size for smaller screens */
@@ -73,6 +212,36 @@
 
 	.hero-subtext {
 		font-size: 1.2rem;
+	}
+
+	.skills-container {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.left-column {
+		max-width: 100%;
+	}
+
+	.right-column {
+		max-width: 100%;
+	}
+
+	.skills-headline {
+		font-size: 2.5rem;
+	}
+
+	.skills-description {
+		font-size: 1rem;
+	}
+
+	.cta-button {
+		font-size: 1rem;
+		padding: 12px 24px;
+	}
+
+	.skill-card {
+		width: 200px;
 	}
 }
 
@@ -88,5 +257,51 @@
 	.cta-button {
 		font-size: 1rem;
 		padding: 0.75rem 1.5rem;
+	}
+}
+
+/* Blue Section */
+.intro-section {
+	background-color: #0084ff; /* Blue background */
+	color: #fff; /* White text */
+	padding: 80px 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 50vh; /* Half screen height */
+}
+
+.intro-content {
+	max-width: 1200px;
+	text-align: left;
+}
+
+.intro-heading {
+	font-size: 4rem;
+	font-weight: bold;
+	line-height: 1.2;
+	margin-bottom: 20px;
+}
+
+.highlight {
+	color: transparent; /* Make text transparent */
+	-webkit-text-stroke: 2px #fff; /* White outline for hollow effect */
+	background: none; /* Remove gradient background */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.intro-heading {
+		font-size: 3rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.intro-heading {
+		font-size: 2.5rem;
+	}
+
+	.highlight {
+		-webkit-text-stroke: 1.5px #fff; /* Slightly thinner stroke for smaller screens */
 	}
 }

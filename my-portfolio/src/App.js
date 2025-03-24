@@ -4,6 +4,7 @@ import "./App.css";
 import TalkComponent from "./components/TalkComponent"; // Import the Navbar component
 import Navbar from "./components/Navbar/Navbar"; // Import the Navbar component
 import Footer from "./components/Footer/Footer"; // Import the Footer component
+import Temp from "./components/temp"; // Import the Footer component
 import Hero from "./pages/Home/Hero"; // Import Home page
 import About from "./pages/About/About"; // Import About page
 import Skills from "./pages/Skills/Skills"; // Import Skills page
@@ -27,6 +28,7 @@ function App() {
 					{/* Contact page */}
 				</Routes>
 				<TalkComponent />
+				{/* <Temp /> */}
 				{/* <Footer /> */}
 			</div>
 		</Router>
