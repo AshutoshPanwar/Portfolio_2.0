@@ -53,7 +53,9 @@ const Projects = () => {
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ delay: 0.2, duration: 1 }}
 			>
-				<h1 className="projects-heading">My Projects</h1>
+				<h1 className="projects-heading">
+					<span className="My">My</span> Projects
+				</h1>
 			</motion.div>
 
 			{/* Introduction Section */}
@@ -64,11 +66,11 @@ const Projects = () => {
 				transition={{ delay: 0.5, duration: 1 }}
 			>
 				<p className="intro-text">
-					Every project I work on is a step forward in mastering data
+					"Every project I work on is a step forward in mastering data
 					science and technology. From predictive analytics to
 					real-world automation, my work is driven by curiosity and
 					precision. Here, you’ll find a showcase of my best projects,
-					where complex problems meet innovative solutions.
+					where complex problems meet innovative solutions."
 				</p>
 			</motion.div>
 

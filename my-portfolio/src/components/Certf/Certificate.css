@@ -1,0 +1,139 @@
+/* ==================== */
+/* Certifications Section */
+/* ==================== */
+.certifications-section {
+	padding: 4rem 2rem;
+	background-color: #000000; /* Dark background */
+	color: #fff; /* White text */
+	text-align: center;
+}
+
+.certifications-section h2 {
+	font-size: 5rem;
+	margin-bottom: 1rem;
+	color: #00d1ff; /* Neon blue accent */
+	background: white; /* Neon blue to purple gradient */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.certifications-description {
+	font-size: 1.2rem;
+	color: #cccccc96; /* Light gray for description */
+	margin-bottom: 2rem;
+}
+
+/* ==================== */
+/* Certifications Grid */
+/* ==================== */
+.certifications-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem; /* Space between cards */
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+/* ==================== */
+/* Certification Card */
+/* ==================== */
+.certification-card {
+	background: rgba(0, 0, 0, 0.1); /* Glassmorphic effect */
+	border-radius: 16px;
+	overflow: hidden; /* Ensure image doesn't overflow */
+	backdrop-filter: blur(10px); /* Blur effect */
+	border: 1px solid rgba(255, 255, 255, 0.434); /* Subtle border */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-card:hover {
+	transform: translateY(-10px); /* Lift on hover */
+	box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3); /* Neon blue shadow on hover */
+}
+
+.certification-image {
+	width: 100%;
+	height: 200px;
+	object-fit: cover; /* Ensure image covers the area */
+}
+
+.certification-details {
+	padding: 1.5rem;
+	text-align: left; /* Ensure text inside details is left-aligned */
+}
+
+.certification-title {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.certification-title h3 {
+	font-size: 1.5rem;
+	color: #fff; /* White text */
+	margin: 0; /* Remove default margin */
+}
+
+.tick-icon {
+	color: #4caf50; /* Green tick mark */
+}
+
+.certification-details .issuer {
+	font-size: 1rem;
+	color: #00d1ff; /* Neon blue accent */
+	margin-bottom: 0.5rem;
+}
+
+.certification-details .date {
+	font-size: 0.9rem;
+	color: #ccc; /* Light gray for date */
+	margin-bottom: 1rem;
+}
+
+.view-certificate {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	color: #8a2be2; /* Purple accent */
+	text-decoration: none;
+	font-weight: 500;
+	transition: color 0.3s ease;
+}
+
+.view-certificate:hover {
+	color: #00d1ff; /* Neon blue accent on hover */
+}
+
+.view-certificate svg {
+	width: 16px;
+	height: 16px;
+}
+
+/* ==================== */
+/* Responsive Design */
+/* ==================== */
+@media (max-width: 768px) {
+	.certifications-grid {
+		grid-template-columns: 1fr; /* 1 card per row on mobile */
+	}
+
+	.certification-details {
+		padding: 1rem; /* Slightly reduce padding for smaller screens */
+	}
+
+	.certification-title h3 {
+		font-size: 1.25rem; /* Slightly reduce font size for smaller screens */
+	}
+
+	.certification-details .issuer {
+		font-size: 0.9rem;
+	}
+
+	.certification-details .date {
+		font-size: 0.8rem;
+	}
+}

@@ -65,7 +65,7 @@
 	.nav-list {
 		display: none; /* Hide links by default on mobile */
 		flex-direction: column; /* Stack links vertically */
-		gap: 0.5rem; /* Reduce gap between links */
+		gap: 2rem; /* Reduce gap between links */
 		position: absolute;
 		top: 100%; /* Position below the navbar */
 		left: 0;

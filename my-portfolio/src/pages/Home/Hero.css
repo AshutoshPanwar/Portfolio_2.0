@@ -21,17 +21,47 @@
 	margin: 0;
 }
 
+/* Subtext */
 .hero-subtext {
 	font-size: 1.5rem;
 	margin-top: 1rem;
 	color: #ccc; /* Light gray for subtext */
 }
 
+.focus-text {
+	color: rgb(255, 255, 255);
+}
+
+/* Gradient Text with Animation */
 .gradient-text {
-	background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Gradient effect */
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-clip: text;
+	background: linear-gradient(
+		45deg,
+		#00ffff,
+		/* Neon Cyan (Brightest) */ #00aaff,
+		/* Electric Sky Blue */ #0055ff,
+		/* Deep Neon Blue */ #7200ff,
+		/* Cyber Purple */ #9a00ff,
+		/* Intense Violet */ #d400ff,
+		/* Ultra Magenta */ #ff007f,
+		/* Cyberpunk Pink */ #440055
+	); /* Multiple colors for gradient */
+	background-size: 400% 400%; /* Increase background size for animation */
+	animation: gradient-animation 20s ease infinite; /* Animation for gradient */
+	-webkit-background-clip: text; /* Clip background to text */
+	-webkit-text-fill-color: transparent; /* Make text transparent */
+}
+
+/* Keyframes for Gradient Animation */
+@keyframes gradient-animation {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .cta-button {
@@ -40,7 +70,7 @@
 	padding: 1rem 2rem;
 	font-size: 1.2rem;
 	border: none;
-	border-radius: 4px;
+	border-radius: 40px;
 	cursor: pointer;
 	margin-top: 2rem;
 	transition: background-color 0.3s ease;
@@ -66,113 +96,135 @@
 	padding: 80px 40px;
 }
 
+/* Skills Container */
 .skills-container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: flex-start;
-	gap: 40px;
-	max-width: 1200px;
-	margin: 0 auto;
+	display: flex; /* Use flexbox for layout */
+	justify-content: space-between; /* Space between columns */
+	align-items: start; /* Align items to the top */
+	padding: 2rem 5rem; /* Add padding around the container */
+	gap: 4rem; /* Gap between columns */
 }
 
-.left-column {
-	flex: 1;
-	max-width: 600px;
+/* Left Column */
+.skills-left-column {
+	flex: 1; /* Allow the left column to grow */
 }
 
+/* Right Column */
+.skills-right-column {
+	flex: 1; /* Allow the right column to grow */
+}
+
+/* Headline */
 .skills-headline {
-	font-size: 4rem;
-	font-weight: bold;
-	margin-bottom: 20px;
-	text-align: left;
+	font-size: 5rem; /* Adjust font size */
+	font-weight: bold; /* Make the headline bold */
+	text-align: left; /* Left-align the headline */
+	margin-bottom: 1rem; /* Space below the headline */
 }
 
-.right-column {
-	flex: 1;
-	max-width: 600px;
-	text-align: left;
-}
-
+/* Description */
 .skills-description {
-	font-size: 1.2rem;
-	line-height: 1.6;
-	color: #ccc; /* Light gray for subtext */
+	font-size: 1rem; /* Adjust font size for description */
+	color: #ccc; /* Light gray color for description */
+	text-align: left; /* Left-align the description */
+	line-height: 1.5; /* Improve readability */
+}
+
+/* Gradient Text */
+.skills-gradient-text {
+	color: transparent; /* Make text transparent */
+	-webkit-text-stroke: 2px #fff; /* White outline for hollow effect */
+	background: none; /* Remove gradient background */ /* Make text transparent */
 }
 
 /* Skill Cards */
 .skill-cards-container {
 	width: 100%;
 	overflow: hidden;
-	margin-top: 60px;
+	/* margin-top: 60px; */
 	position: relative;
 }
 
 .skill-cards-wrapper {
 	display: flex;
-	gap: 20px;
-	width: max-content;
+	transition: transform 0.5s ease;
 }
 
 .skill-card {
-	background-color: #1a1a1a; /* Dark card background */
-	border-radius: 10px;
-	padding: 20px;
-	width: 250px;
-	text-align: center;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-	flex-shrink: 0;
+	background-color: #1e1e1e; /* Dark background for cards */
+	color: #fff; /* White text */
+	border-radius: 12px;
+	padding: 1.5rem;
+	margin: 0 1rem; /* Margin for spacing */
+	flex: 0 0 auto; /* Prevent flex items from shrinking */
+	width: 250px; /* Fixed width for cards */
+	text-align: center; /* Center text */
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+	transition: transform 0.3s; /* Smooth transform on hover */
 }
 
-.skill-icon {
-	color: #ff7e5f; /* Gradient color for icons */
-	margin-bottom: 15px;
+.skill-card:hover {
+	transform: scale(1.05); /* Slightly enlarge on hover */
+}
+.skill-image {
+	margin-bottom: 1rem; /* Space between image and text */
 }
 
+.skill-image img {
+	width: 100%; /* Make image responsive */
+	height: auto; /* Maintain aspect ratio */
+	border-radius: 8px; /* Rounded corners for images */
+}
 .skill-title {
-	font-size: 1.5rem;
+	font-size: 2rem;
 	font-weight: bold;
 	margin-bottom: 10px;
 	color: #fff; /* White text */
 }
 
 .skill-description {
-	font-size: 1rem;
+	/* font-size: 0.2rem; */
 	color: #ccc; /* Light gray for subtext */
 }
 
 /* Arrow Buttons */
 .arrow-buttons {
-	position: absolute;
-	top: 50%;
-	left: 0;
-	right: 0;
-	display: flex;
-	justify-content: space-between;
-	transform: translateY(-50%);
-	z-index: 1;
+	position: absolute; /* Position relative to the skill cards container */
+	top: 50%; /* Center vertically */
+	left: 10px; /* Position on the left */
+	right: 10px; /* Position on the right */
+	transform: translateY(-50%); /* Center the buttons vertically */
+	display: flex; /* Use flexbox for layout */
+	justify-content: space-between; /* Space out the buttons */
+	z-index: 1; /* Ensure buttons are above other elements */
 }
 
+/* Individual Arrow Button */
 .arrow-button {
-	background-color: #ff7e5f; /* Gradient color for buttons */
-	color: #000;
-	border: none;
-	border-radius: 50%;
-	width: 40px;
-	height: 40px;
-	font-size: 1.5rem;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: background-color 0.3s ease, transform 0.3s ease;
+	background-color: rgba(
+		255,
+		255,
+		255,
+		0.8
+	); /* Semi-transparent background */
+	color: #000; /* Black text */
+	border: none; /* Remove border */
+	border-radius: 50%; /* Circular buttons */
+	width: 40px; /* Fixed width */
+	height: 40px; /* Fixed height */
+	font-size: 1.5rem; /* Font size for arrow */
+	cursor: pointer; /* Pointer cursor on hover */
+	display: flex; /* Use flexbox for centering */
+	align-items: center; /* Center icon vertically */
+	justify-content: center; /* Center icon horizontally */
+	transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
 }
 
 .arrow-button:hover {
-	background-color: #feb47b; /* Gradient hover color */
-	transform: scale(1.1);
+	background-color: rgba(255, 255, 255, 1); /* Solid background on hover */
+	transform: scale(1.1); /* Slightly enlarge on hover */
 }
-
 /* Button at the bottom of the cards */
 .button-container {
 	width: 100%;
@@ -181,21 +233,23 @@
 	margin-top: 40px;
 }
 
-.cta-button {
-	padding: 16px 32px;
-	background-color: #ff7e5f; /* Gradient color for button */
-	color: #000;
-	border: none;
+.skill-cta-button {
+	display: inline-block;
+	padding: 0.75rem 2rem;
+	background-color: transparent; /* Transparent background */
+	border: 2px solid #fff; /* White border for accent */
+	color: #fff; /* White text */
 	border-radius: 50px;
 	font-size: 1.2rem;
-	font-weight: 600;
+	font-family: "Poppins", sans-serif;
 	cursor: pointer;
-	transition: background-color 0.3s ease, transform 0.3s ease;
+	text-decoration: none;
+	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.cta-button:hover {
-	background-color: #feb47b; /* Gradient hover color */
-	transform: scale(1.1);
+.skill-cta-button:hover {
+	background-color: #fff; /* White background on hover */
+	color: #000; /* Black text on hover */
 }
 
 /* Responsive Design */
@@ -205,7 +259,168 @@
 	}
 }
 
+/* Blue Section */
+.intro-section {
+	background-color: #0084ff; /* Blue background */
+	color: #fff; /* White text */
+	padding: 80px 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 50vh; /* Half screen height */
+}
+
+.intro-content {
+	max-width: 1200px;
+	text-align: left;
+}
+
+.intro-heading {
+	font-size: 4rem;
+	font-weight: bold;
+	line-height: 1.2;
+	margin-bottom: 20px;
+}
+
+.highlight {
+	color: transparent; /* Make text transparent */
+	-webkit-text-stroke: 2px #fff; /* White outline for hollow effect */
+	background: none; /* Remove gradient background */
+}
+
+/* Who Am I Home */
+.who-we-are-container-Home,
+.my-story-container-Home,
+.my-mission-container-Home {
+	display: flex;
+	align-items: first baseline;
+	justify-content: space-between;
+	gap: 4rem;
+	padding: 4rem 7rem;
+	background-color: #ffffff; /* Black background */
+	color: #000000; /* White text */
+}
+
+.who-we-are-left-Home,
+.my-story-left-Home,
+.my-mission-left-Home {
+	flex: 1;
+}
+
+.who-we-are-left-Home h2,
+.my-story-left-Home h2,
+.my-mission-left-Home h2 {
+	font-size: clamp(4rem, 8vw, 10rem); /* Responsive font size */
+	font-weight: 900;
+	line-height: 1;
+	text-transform: uppercase;
+	text-align: left;
+	color: #000000; /* White text */
+}
+
+.who-we-are-right-Home,
+.my-story-right-Home,
+.my-mission-right-Home {
+	flex: 1;
+}
+
+.who-we-are-right-Home p,
+.my-story-right-Home p,
+.my-mission-right-Home p {
+	font-size: 1.2rem;
+	text-align: left;
+	line-height: 1.8;
+	color: #000000; /* Light gray text */
+}
+
+.who-we-are-right-Home strong,
+.my-story-right-Home strong,
+.my-mission-right-Home strong {
+	color: #000000; /* White text for emphasis */
+	font-weight: 600;
+}
+
+.who-we-are-left-Home button {
+	/* Style for the "More About Me" button */
+	padding: 10px 20px;
+	font-size: 16px;
+	color: black; /* Black text */
+	background-color: rgba(0, 0, 0, 0); /* Black background */
+	border: 2px solid black; /* Black border */
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 10px;
+	transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+	display: block;
+	margin-left: 0;
+}
+
+.who-we-are-left-Home button:hover {
+	background-color: black; /* Blue background on hover */
+	color: white; /* White text on hover */
+	border-color: black; /* Blue border on hover */
+}
+
+/* White About Section */
+.intro-section-About {
+	background-color: white; /* Blue background */
+	color: #000000; /* White text */
+	padding: 80px 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 50vh; /* Half screen height */
+}
+
+.intro-content-About {
+	max-width: 1200px;
+	text-align: left;
+}
+
+.intro-heading-About {
+	font-size: 6rem;
+	font-weight: bold;
+	line-height: 1.2;
+	margin-bottom: 20px;
+}
+
+.highlight-About {
+	color: transparent; /* Make text transparent */
+	-webkit-text-stroke: 2px #000000; /* White outline for hollow effect */
+	background: none; /* Remove gradient background */
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
+	.intro-heading {
+		font-size: 3rem;
+	}
+	.who-we-are-container-Home,
+	.my-story-container-Home,
+	.my-mission-container-Home {
+		flex-direction: column; /* Stack on smaller screens */
+		gap: 2rem;
+		padding: 2rem;
+	}
+
+	.who-we-are-left-Home h2,
+	.my-story-left-Home h2,
+	.my-mission-left-Home h2 {
+		font-size: clamp(3rem, 6vw, 8rem); /* Adjust font size for mobile */
+		text-align: center; /* Center text on mobile */
+	}
+
+	.who-we-are-right-Home p,
+	.my-story-right-Home p,
+	.my-mission-right-Home p {
+		font-size: 1rem; /* Adjust text size for mobile */
+		text-align: left; /* Center text on mobile */
+	}
+
+	.hero-section {
+		padding: 3rem;
+	}
+
 	.hero-content h1 {
 		font-size: 3.5rem; /* Smaller font size for tablets */
 	}
@@ -246,62 +461,58 @@
 }
 
 @media (max-width: 480px) {
+	.who-we-are-right-Home p,
+	.my-story-right-Home p,
+	.my-mission-right-Home p {
+		font-size: 1.5rem; /* Adjust text size for mobile */
+		text-align: left; /* Center text on mobile */
+	}
+	.intro-heading-About {
+		font-size: 4rem;
+	}
+
+	.highlight-About {
+		-webkit-text-stroke: 1.5px #000000; /* Slightly thinner stroke for smaller screens */
+	}
+
+	.intro-heading {
+		/* font-size: 2.5rem; */
+	}
+
+	.highlight {
+		-webkit-text-stroke: 1.5px #fff; /* Slightly thinner stroke for smaller screens */
+	}
+
+	.hero-section {
+		padding: 2rem;
+	}
+
+	.hero-section {
+		height: 90vh;
+	}
+
 	.hero-content h1 {
-		font-size: 2.5rem; /* Smaller font size for mobile */
+		font-size: clamp(4rem, 10vw, 5rem); /* Smaller font size for mobile */
 	}
 
 	.hero-subtext {
-		font-size: 1rem;
+		font-size: 1.5rem;
 	}
 
 	.cta-button {
 		font-size: 1rem;
 		padding: 0.75rem 1.5rem;
 	}
-}
 
-/* Blue Section */
-.intro-section {
-	background-color: #0084ff; /* Blue background */
-	color: #fff; /* White text */
-	padding: 80px 40px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 50vh; /* Half screen height */
-}
-
-.intro-content {
-	max-width: 1200px;
-	text-align: left;
-}
-
-.intro-heading {
-	font-size: 4rem;
-	font-weight: bold;
-	line-height: 1.2;
-	margin-bottom: 20px;
-}
-
-.highlight {
-	color: transparent; /* Make text transparent */
-	-webkit-text-stroke: 2px #fff; /* White outline for hollow effect */
-	background: none; /* Remove gradient background */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-	.intro-heading {
-		font-size: 3rem;
+	.skills-container {
+		padding: 5rem 0;
 	}
-}
-
-@media (max-width: 480px) {
-	.intro-heading {
-		font-size: 2.5rem;
+	.skills-headline {
+		font-size: 5rem;
+		margin-bottom: 0;
 	}
 
-	.highlight {
-		-webkit-text-stroke: 1.5px #fff; /* Slightly thinner stroke for smaller screens */
+	.skills-description {
+		font-size: 2rem;
 	}
 }

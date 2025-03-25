@@ -1,0 +1,149 @@
+/* ==================== */
+/* Skills Section */
+/* ==================== */
+.skills-section-sk {
+	padding: 4rem 2rem;
+	background-color: #000; /* Black background */
+	color: #fff; /* White text */
+	text-align: center;
+}
+
+.skills-section-sk h2 {
+	font-size: 5rem;
+	margin-bottom: 1rem;
+	color: #00d1ff; /* Neon blue accent */
+	background: white; /* Neon blue to purple gradient */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.skills-description-sk {
+	font-size: 1.2rem;
+	color: #ccc; /* Light gray for description */
+	margin-bottom: 2rem;
+}
+
+/* ==================== */
+/* Skills Container */
+/* ==================== */
+.skills-container-sk {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+/* ==================== */
+/* Skills Category */
+/* ==================== */
+.skills-category-sk {
+	margin-bottom: 2rem; /* Space between categories */
+}
+
+.skills-category-sk h3 {
+	font-size: 2rem;
+	/* margin-bottom: 1rem; */
+	color: #00d1ff; /* Neon blue accent */
+	text-align: left;
+}
+
+.skills-category-sk hr {
+	margin: 1.5rem 0;
+	border: 1px solid rgba(255, 255, 255, 0.491);
+}
+
+/* ==================== */
+/* Skills Grid */
+/* ==================== */
+.skills-grid-sk {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr); /* 1 column on small screens */
+	gap: 1.5rem; /* Space between cards */
+}
+
+@media (min-width: 768px) {
+	.skills-grid-sk {
+		grid-template-columns: repeat(
+			2,
+			1fr
+		); /* 2 columns on medium and larger screens */
+	}
+}
+
+/* ==================== */
+/* Skill Card */
+/* ==================== */
+.skill-card-sk {
+	background: black; /* Gradient effect */
+	border-radius: 16px;
+	padding: 1.5rem;
+	/* box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);  */
+	border: 1px solid rgba(255, 255, 255, 0.343);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	display: flex;
+	align-items: center; /* Center items vertically */
+}
+
+.skill-card-sk:hover {
+	transform: translateY(-5px); /* Lift on hover */
+	box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05); /* Neon blue shadow on hover */
+}
+
+.skill-icon-sk {
+	margin-right: 1rem; /* Space between icon and text */
+	color: #00d1ff; /* Neon blue icon color */
+}
+
+.skill-info-sk {
+	flex-grow: 1; /* Allow info to take remaining space */
+}
+
+.skill-info-sk h4 {
+	font-size: 1.2rem;
+	margin: 0; /* Remove default margin */
+	text-align: left;
+	padding-bottom: 1rem;
+}
+
+.progress-bar-sk {
+	background: rgba(
+		255,
+		255,
+		255,
+		0.2
+	); /* Light background for progress bar */
+	border-radius: 8px;
+	height: 10px;
+	overflow: hidden; /* Ensure progress doesn't overflow */
+}
+
+.progress-sk {
+	background: rgba(255, 255, 255, 0.851); /* Neon blue progress */
+	height: 100%; /* Full height of the progress bar */
+	transition: width 0.3s ease; /* Smooth transition for progress */
+}
+
+/* ==================== */
+/* Skill Icon Image */
+/* ==================== */
+.skill-icon-image {
+	width: 24px; /* Set icon size */
+	height: 24px; /* Set icon size */
+	object-fit: contain; /* Ensure the image fits within the container */
+}
+
+/* ==================== */
+/* Responsive Design */
+/* ==================== */
+@media (max-width: 768px) {
+	.skills-section-sk h2 {
+		font-size: 2rem; /* Slightly reduce font size for smaller screens */
+	}
+
+	.skills-description-sk {
+		font-size: 1rem; /* Slightly reduce font size for smaller screens */
+	}
+}
+
+@media (max-width: 480px) {
+}

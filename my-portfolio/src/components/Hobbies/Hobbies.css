@@ -1,0 +1,135 @@
+/* ==================== */
+/* Hobbies Section */
+/* ==================== */
+.hobbies-section {
+	padding: 4rem 2rem;
+	background-color: #000; /* Black background */
+	color: #fff; /* White text */
+	text-align: center;
+}
+
+.hobbies-container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.hobbies-container h2 {
+	font-size: 5rem;
+	margin-bottom: 1rem;
+	color: #ff7e5f; /* Gradient color for heading */
+	/* background: linear-gradient(45deg, #00c6ff, #0072ff); */
+	background: white;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.hobbies-description {
+	font-size: 1.2rem;
+	color: #ccc; /* Light gray for description */
+	margin-bottom: 2rem;
+}
+
+/* ==================== */
+/* Carousel Styles */
+/* ==================== */
+.hobbies-carousel {
+	width: 100%;
+	height: 500px; /* Adjust height as needed */
+	border-radius: 16px;
+	overflow: hidden;
+	position: relative;
+}
+
+.carousel-slide {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.carousel-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: brightness(0.5); /* Darken image for better text visibility */
+	transition: filter 0.3s ease;
+}
+
+.carousel-slide:hover .carousel-image {
+	filter: brightness(0.7); /* Darken image further on hover */
+}
+
+.carousel-caption {
+	position: absolute;
+	bottom: 2rem;
+	left: 2rem;
+	text-align: left;
+	/* background: rgba(0, 0, 0, 0.6);  */
+	padding: 1.5rem;
+	border-radius: 8px;
+	transition: background 0.3s ease;
+}
+
+.carousel-slide:hover .carousel-caption {
+	/* background: rgba(0, 0, 0, 0.8);  */
+}
+
+.carousel-caption h3 {
+	font-size: 5rem;
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+	color: #fff;
+}
+
+.carousel-caption p {
+	font-size: 1.2rem;
+	color: #ccc;
+}
+
+/* ==================== */
+/* Swiper Navigation and Pagination */
+/* ==================== */
+.swiper-pagination-bullet {
+	background-color: #fff; /* White pagination bullets */
+	opacity: 0.5;
+	transition: opacity 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+	background-color: #0072ff; /* Gradient color for active bullet */
+	opacity: 1;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	color: #fff; /* White navigation arrows */
+	transition: color 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+	color: #0072ff; /* Gradient color on hover */
+}
+
+/* ==================== */
+/* Responsive Design */
+/* ==================== */
+@media (max-width: 768px) {
+	.hobbies-carousel {
+		height: 400px; /* Adjust height for smaller screens */
+	}
+
+	.carousel-caption {
+		bottom: 1rem;
+		left: 1rem;
+		padding: 1rem;
+	}
+
+	.carousel-caption h3 {
+		font-size: 1.5rem;
+	}
+
+	.carousel-caption p {
+		font-size: 1rem;
+	}
+}

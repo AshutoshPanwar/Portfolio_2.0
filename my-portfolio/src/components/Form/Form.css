@@ -1,0 +1,208 @@
+/* Parent Container (Full Screen) */
+.contact-section {
+	background-color: #000; /* Full black background */
+	min-height: 100vh; /* Full viewport height */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem 0; /* Add some padding */
+}
+
+/* Contact Container */
+.contact-container {
+	display: flex;
+	justify-content: space-between;
+	gap: 2rem;
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 2rem;
+	border: 1px solid #fff;
+	border-radius: 20px;
+}
+
+/* Left Column */
+.left-column {
+	flex: 1;
+	max-width: 50%;
+}
+
+.left-column h1 {
+	font-size: 3.5rem;
+	color: #fff;
+	margin-bottom: 1.5rem;
+	text-align: left;
+	line-height: 1.2;
+}
+
+.left-column p {
+	text-align: left;
+	color: #aaa;
+	font-size: 1.2rem;
+}
+
+.highlight {
+	color: #ff7f5f00; /* Highlight color */
+}
+
+/* Social Media Icons */
+.social-media-logos {
+	display: flex;
+	gap: 1.5rem;
+	margin-top: 2rem;
+}
+
+.social-media-logos a {
+	transition: transform 0.3s ease;
+}
+
+.social-media-logos a:hover {
+	transform: scale(1.1);
+}
+
+/* Right Column */
+.right-column {
+	flex: 1;
+	max-width: 50%;
+}
+
+/* Contact Form */
+.contact-form {
+	background-color: #000000;
+
+	padding: 2rem;
+	border-radius: 8px;
+	/* box-shadow: 0px 7px 29px 0px rgba(255, 255, 255, 0.217); */
+}
+
+/* Form Group */
+.form-group {
+	margin-bottom: 1.5rem;
+}
+
+.form-group label {
+	display: block;
+	font-size: 1rem;
+	color: #ffffffde;
+	margin-bottom: 0.5rem;
+	text-align: left;
+}
+
+.form-group input,
+.form-group textarea {
+	width: 100%;
+	padding: 0.75rem;
+	border-radius: 8px;
+	border: 1px solid rgba(255, 255, 255, 0.539);
+	background-color: rgba(41, 41, 41, 0.23);
+	color: #fff;
+	font-size: 1rem;
+	transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+	outline: none;
+	border-color: #00a2ff; /* Highlight color */
+}
+
+.form-group textarea {
+	resize: vertical;
+	min-height: 150px;
+}
+
+/* Submit Button */
+.submit-button {
+	background: linear-gradient(45deg, #00ffff, #0099ff, #0022ff);
+	color: #fff;
+	font-size: 1rem;
+	font-weight: bold;
+	padding: 0.75rem 1.5rem;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: opacity 0.3s ease;
+	width: 100%;
+}
+
+.submit-button:hover {
+	opacity: 0.8;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+	.left-column h1 {
+		font-size: 3rem;
+	}
+
+	.left-column p {
+		font-size: 1.1rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.contact-container {
+		flex-direction: column;
+		padding: 1.5rem;
+	}
+
+	.left-column,
+	.right-column {
+		max-width: 100%;
+	}
+
+	.left-column h1 {
+		font-size: 2.5rem;
+		text-align: center;
+	}
+
+	.left-column p {
+		text-align: center;
+	}
+
+	.social-media-logos {
+		justify-content: center;
+	}
+}
+
+@media (max-width: 480px) {
+	.contact-container {
+		padding: 1rem;
+		gap: 1.5rem;
+	}
+
+	.left-column h1 {
+		font-size: 2rem;
+	}
+
+	.contact-form {
+		padding: 1.5rem;
+	}
+
+	.social-media-logos a {
+		transform: scale(0.9);
+	}
+
+	.form-group input,
+	.form-group textarea {
+		padding: 0.6rem;
+	}
+
+	.submit-button {
+		padding: 0.6rem 1rem;
+	}
+}
+
+@media (max-width: 360px) {
+	.left-column h1 {
+		font-size: 1.75rem;
+	}
+
+	.social-media-logos {
+		gap: 1rem;
+	}
+
+	.social-media-logos a {
+		transform: scale(0.8);
+	}
+}

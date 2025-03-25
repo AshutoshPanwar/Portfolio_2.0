@@ -17,7 +17,7 @@
 .projects-heading-container {
 	width: 100%;
 	text-align: center;
-	margin-bottom: 2rem;
+	margin-bottom: 0rem;
 }
 
 .projects-heading {
@@ -26,9 +26,21 @@
 	letter-spacing: -2px;
 	line-height: 0.9;
 	text-transform: uppercase;
-	background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Gradient text */
+	background: linear-gradient(
+		90deg,
+		#00ffff,
+		#0099ff,
+		#0022ff
+	); /* Gradient text */
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.projects-heading .My {
+	background: white;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
 	background-clip: text;
 }
 
@@ -49,6 +61,7 @@
 	border-radius: 12px;
 	overflow: hidden;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	border: 1px solid rgba(255, 255, 255, 0.343);
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -58,7 +71,7 @@
 
 .project-card:hover {
 	transform: translateY(-10px); /* Lift on hover */
-	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+	box-shadow: 0 8px 16px rgba(0, 119, 255, 0.673); /* Stronger shadow on hover */
 }
 
 /* Project Image */
@@ -70,6 +83,7 @@
 	align-items: center;
 	justify-content: center;
 	color: #aaa; /* Placeholder text color */
+	margin: 1rem;
 }
 
 /* Project Details */
@@ -91,13 +105,13 @@
 .project-icon {
 	width: 40px;
 	height: 40px;
-	color: #ff7e5f; /* Gradient color for icons */
+	color: grey; /* Gradient color for icons */
 }
 
 .project-details h3 {
 	font-size: 1.5rem;
 	margin-bottom: 0.5rem;
-	color: #ff7e5f; /* Gradient color for heading */
+	color: white; /* Gradient color for heading */
 	text-align: left; /* Left-align heading */
 }
 
@@ -116,8 +130,9 @@
 }
 
 .skill-tag {
-	background-color: #ff7e5f; /* Gradient color for tags */
-	color: #fff;
+	background-color: rgba(255, 255, 255, 0); /* Gradient color for tags */
+	color: #ffffff;
+	border: 1px solid rgb(0, 119, 255);
 	font-size: 0.9rem;
 	padding: 0.25rem 0.75rem;
 	border-radius: 12px;
@@ -127,12 +142,13 @@
 .project-link {
 	display: inline-flex;
 	align-items: center;
-	background: linear-gradient(45deg, #ff7e5f, #feb47b);
+	background: black;
+	border: 1px solid rgba(255, 255, 255, 0.343);
 	color: #fff;
 	font-size: 1rem;
 	font-weight: bold;
 	padding: 1rem 1rem;
-	border-radius: 4px;
+	border-radius: 10px;
 	text-decoration: none;
 	transition: opacity 0.3s ease;
 	justify-content: flex-start; /* Left-align link */
@@ -140,9 +156,63 @@
 
 .project-link:hover {
 	opacity: 0.9;
+	background: white;
+	color: black;
 }
 
 .view-icon {
+	width: 20px;
+	height: 20px;
+	margin-right: 0.5rem; /* Space between icon and text */
+}
+
+.projects-intro {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50vh; /* Cover the entire viewport height */
+	text-align: center; /* Center-align text */
+	padding: 0 1rem; /* Add padding for smaller screens */
+	background-color: #000; /* Match the background color */
+}
+
+.intro-text {
+	font-size: 1.5rem; /* Larger font size for emphasis */
+	color: #ccc; /* Light gray for readability */
+	line-height: 1.6; /* Improve readability */
+	max-width: 800px; /* Limit text width for better readability */
+}
+
+/* Projects Content */
+.projects-content {
+	padding: 2rem 0; /* Add padding to separate from the intro section */
+}
+
+.more-projects-button-container {
+	display: flex;
+	justify-content: center;
+	margin: 2rem 0; /* Add margin for spacing */
+}
+
+.more-projects-button {
+	display: inline-flex;
+	align-items: center;
+	background: linear-gradient(45deg, #0099ff, #0022ff);
+	color: #fff;
+	font-size: 1rem;
+	font-weight: bold;
+	padding: 0.75rem 1.5rem; /* Adjust padding for button size */
+	border-radius: 100px;
+	text-decoration: none;
+	transition: opacity 0.3s ease;
+}
+
+.more-projects-button:hover {
+	opacity: 0.9;
+	transform: translateY(-1px);
+}
+
+.github-icon {
 	width: 20px;
 	height: 20px;
 	margin-right: 0.5rem; /* Space between icon and text */
@@ -169,53 +239,12 @@
 	}
 }
 
-.projects-intro {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 50vh; /* Cover the entire viewport height */
-	text-align: center; /* Center-align text */
-	padding: 0 2rem; /* Add padding for smaller screens */
-	background-color: #000; /* Match the background color */
-}
-
-.intro-text {
-	font-size: 1.5rem; /* Larger font size for emphasis */
-	color: #ccc; /* Light gray for readability */
-	line-height: 1.6; /* Improve readability */
-	max-width: 800px; /* Limit text width for better readability */
-}
-
-/* Projects Content */
-.projects-content {
-	padding: 2rem 0; /* Add padding to separate from the intro section */
-}
-
-.more-projects-button-container {
-	display: flex;
-	justify-content: center;
-	margin: 2rem 0; /* Add margin for spacing */
-}
-
-.more-projects-button {
-	display: inline-flex;
-	align-items: center;
-	background: linear-gradient(45deg, #ff7e5f, #feb47b);
-	color: #fff;
-	font-size: 1rem;
-	font-weight: bold;
-	padding: 0.75rem 1.5rem; /* Adjust padding for button size */
-	border-radius: 4px;
-	text-decoration: none;
-	transition: opacity 0.3s ease;
-}
-
-.more-projects-button:hover {
-	opacity: 0.9;
-}
-
-.github-icon {
-	width: 20px;
-	height: 20px;
-	margin-right: 0.5rem; /* Space between icon and text */
+@media (max-width: 480px) {
+	.projects-heading {
+		text-align: left;
+	}
+	.intro-text {
+		text-align: left;
+		font-size: 1.2rem;
+	}
 }

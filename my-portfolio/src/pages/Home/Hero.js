@@ -2,36 +2,37 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { FaPython, FaChartLine, FaRobot, FaDatabase } from "react-icons/fa"; // Using React Icons for skill icons
 import "./Hero.css"; // Ensure you create a corresponding CSS file
+import Prj from "../../components/Project-Home/Prj";
+import Form from "../../components/Form/Form";
 
 const Hero = () => {
 	// Skill card data
 	const skills = [
 		{
-			icon: <FaPython size={40} />,
+			image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png", // Replace with actual URL
 			title: "Python Programming",
 			description:
 				"Proficient in Python for data analysis, automation, and machine learning. Key tools: Pandas, NumPy, Scikit-learn.",
 		},
 		{
-			icon: <FaChartLine size={40} />,
+			image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png", // Replace with actual URL
 			title: "Data Visualization",
 			description:
 				"Expertise in creating interactive visualizations using tools like Matplotlib, Seaborn, and Tableau.",
 		},
 		{
-			icon: <FaRobot size={40} />,
+			image: "https://www.pngitem.com/pimgs/m/346-3460443_machine-learning-course-near-me-machine-learning-logo.png", // Replace with actual URL
 			title: "Machine Learning",
 			description:
 				"Skilled in building and deploying ML models using TensorFlow, Keras, and PyTorch.",
 		},
 		{
-			icon: <FaDatabase size={40} />,
+			image: "https://example.com/database-management.png", // Replace with actual URL
 			title: "Database Management",
 			description:
 				"Experience with SQL and NoSQL databases like MySQL, MongoDB, and PostgreSQL.",
 		},
 	];
-
 	const [scrollPosition, setScrollPosition] = useState(0);
 	const [isPaused, setIsPaused] = useState(false);
 	const containerRef = useRef(null);
@@ -82,10 +83,10 @@ const Hero = () => {
 					</h1>
 					<p className="hero-subtext">
 						I specialize in{" "}
-						<span className="gradient-text">data science</span>,{" "}
-						<span className="gradient-text">machine learning</span>,
+						<span className="focus-text">data science</span>,{" "}
+						<span className="focus-text">machine learning</span>,
 						and{" "}
-						<span className="gradient-text">
+						<span className="focus-text">
 							decision-making strategies
 						</span>{" "}
 						to solve complex problems.
@@ -94,6 +95,98 @@ const Hero = () => {
 					<p className="hero-note">
 						Let’s build the future with data-driven solutions.
 					</p>
+				</div>
+			</section>
+
+			{/* White About Ribon */}
+			<section className="intro-section-About">
+				<div className="intro-content-About">
+					<h1 className="intro-heading-About">
+						<span className="highlight-About"> Hi, I am </span>
+						Ashutosh Panwar
+						<span className="highlight-About">
+							, a data scientist.
+						</span>
+					</h1>
+				</div>
+			</section>
+
+			{/* Who Am I Section */}
+			<motion.div
+				className="who-we-are-container-Home"
+				initial={{ opacity: 0, y: 20 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ delay: 0.9, duration: 1 }}
+			>
+				{/* Left Side - Bold Text */}
+				<motion.div
+					className="who-we-are-left-Home"
+					initial={{ opacity: 0, x: -50 }}
+					animate={{ opacity: 1, x: 0 }}
+					transition={{ delay: 1.1, duration: 1 }}
+				>
+					<h2>About Me!</h2>
+					<motion.button
+						whileHover={{ scale: 1.05 }}
+						whileTap={{ scale: 0.95 }}
+						className="who-we-are-left-Home-button"
+					>
+						More About Me
+					</motion.button>
+				</motion.div>
+
+				{/* Right Side - Paragraph */}
+				<motion.div
+					className="who-we-are-right-Home"
+					initial={{ opacity: 0, x: 50 }}
+					animate={{ opacity: 1, x: 0 }}
+					transition={{ delay: 1.1, duration: 1 }}
+				>
+					<p>
+						The world runs on <strong>data</strong>, and I want to
+						be at the heart of it. I am an{" "}
+						<strong>aspiring data scientist</strong>, fueled by
+						curiosity and driven by the endless possibilities hidden
+						within numbers. My journey began with a simple question:
+						<strong>"What if data could tell a story?"</strong>
+					</p>
+					<br />
+					<p>
+						From exploring{" "}
+						<strong>Python, SQL, and machine learning</strong> to
+						diving deep into
+						<strong>AI and analytics</strong>, I am constantly
+						evolving, learning, and building. I believe that data
+						science isn’t just about crunching numbers—it’s about
+						<strong>
+							solving real-world problems, predicting the future,
+							and making an impact.
+						</strong>
+					</p>
+					<br />
+					<p>
+						This portfolio isn’t just a collection of projects; it’s
+						a{" "}
+						<strong>
+							reflection of my journey, my growth, and my ambition
+						</strong>
+						. With every dataset I analyze, every model I train, and
+						every insight I uncover, I’m one step closer to{" "}
+						<strong>mastering the art of data science.</strong>
+					</p>
+				</motion.div>
+			</motion.div>
+
+			{/* Blue Ribon */}
+			<section className="intro-section">
+				<div className="intro-content">
+					<h1 className="intro-heading">
+						<span className="highlight">Data tells a story</span>—I
+						make sure it’s the right one.{" "}
+						<span className="highlight">I’m [Your Name]</span>, a
+						data scientist passionate about AI, analytics, and
+						machine learning.
+					</h1>
 				</div>
 			</section>
 
@@ -106,26 +199,24 @@ const Hero = () => {
 			>
 				<div className="skills-container">
 					{/* Left Column */}
-					<div className="left-column">
+					<div className="skills-left-column">
 						<motion.h1
 							className="skills-headline"
 							whileHover={{ scale: 1.05 }}
 						>
-							<span className="gradient-text">Skills</span> That
-							Drive Impact
+							<span className="skills-gradient-text">Skills</span>{" "}
+							That Drive Impact.
 						</motion.h1>
 					</div>
 
 					{/* Right Column */}
-					<div className="right-column">
+					<div className="skills-right-column">
 						<p className="skills-description">
 							Combining{" "}
-							<span className="gradient-text">data science</span>,{" "}
-							<span className="gradient-text">
-								machine learning
-							</span>
+							<span className="focus-text">data science</span>,{" "}
+							<span className="focus-text">machine learning</span>
 							, and{" "}
-							<span className="gradient-text">
+							<span className="focus-text">
 								analytical skills
 							</span>{" "}
 							to deliver insightful solutions.
@@ -134,6 +225,7 @@ const Hero = () => {
 				</div>
 
 				{/* Skill Cards */}
+				{/* Skill Cards */}
 				<div
 					className="skill-cards-container"
 					onMouseEnter={() => setIsPaused(true)} // Pause on hover
@@ -141,10 +233,10 @@ const Hero = () => {
 				>
 					<div className="arrow-buttons">
 						<button className="arrow-button" onClick={moveLeft}>
-							&lt;
+							&lt; {/* Left Arrow */}
 						</button>
 						<button className="arrow-button" onClick={moveRight}>
-							&gt;
+							&gt; {/* Right Arrow */}
 						</button>
 					</div>
 					<motion.div
@@ -160,10 +252,12 @@ const Hero = () => {
 						{/* Duplicate cards for seamless looping */}
 						{[...skills, ...skills].map((skill, index) => (
 							<div key={index} className="skill-card">
-								<div className="skill-icon">{skill.icon}</div>
+								<div className="skill-image">
+									<img src={skill.image} alt={skill.title} />
+								</div>
 								<h3 className="skill-title">{skill.title}</h3>
 								<p className="skill-description">
-									{skill.description}
+									{/* {skill.description} */}
 								</p>
 							</div>
 						))}
@@ -173,7 +267,7 @@ const Hero = () => {
 				{/* Button at the bottom of the cards */}
 				<div className="button-container">
 					<motion.button
-						className="cta-button"
+						className="skill-cta-button"
 						whileHover={{ scale: 1.1 }}
 						whileTap={{ scale: 0.9 }}
 					>
@@ -181,17 +275,8 @@ const Hero = () => {
 					</motion.button>
 				</div>
 			</motion.section>
-			<section className="intro-section">
-				<div className="intro-content">
-					<h1 className="intro-heading">
-						<span className="highlight">Data tells a story</span>—I
-						make sure it’s the right one.{" "}
-						<span className="highlight">I’m [Your Name]</span>, a
-						data scientist passionate about AI, analytics, and
-						machine learning.
-					</h1>
-				</div>
-			</section>
+			<Prj />
+			<Form />
 		</>
 	);
 };
