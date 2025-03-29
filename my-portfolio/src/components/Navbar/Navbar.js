@@ -1,14 +1,20 @@
 // components/Navbar.js
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import "./Navbar.css"; // Import the CSS file
 
 const Navbar = () => {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+	const location = useLocation();
 
 	const toggleMobileMenu = () => {
 		setIsMobileMenuOpen(!isMobileMenuOpen);
 	};
+
+	// Scroll to the top whenever the route changes
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [location.pathname]);
 
 	return (
 		<nav className="navbar">
@@ -36,20 +42,20 @@ const Navbar = () => {
 				</li>
 				<li className="nav-item">
 					<NavLink
-						to="/projects"
-						className="nav-link"
-						onClick={toggleMobileMenu}
-					>
-						Projects
-					</NavLink>
-				</li>
-				<li className="nav-item">
-					<NavLink
 						to="/skills"
 						className="nav-link"
 						onClick={toggleMobileMenu}
 					>
 						Skills
+					</NavLink>
+				</li>
+				<li className="nav-item">
+					<NavLink
+						to="/projects"
+						className="nav-link"
+						onClick={toggleMobileMenu}
+					>
+						Projects
 					</NavLink>
 				</li>
 				<li className="nav-item">

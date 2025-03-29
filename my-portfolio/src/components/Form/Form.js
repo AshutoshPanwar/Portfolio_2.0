@@ -16,21 +16,22 @@ const Temp = () => {
 					<p>Connect with me</p>
 					<div className="social-media-logos">
 						<a
-							href="https://twitter.com/yourprofile"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<Twitter size={40} color="#ffffff" />
-						</a>
-						<a
-							href="https://linkedin.com/in/yourprofile"
+							href="https://www.linkedin.com/in/ashutoshpanwar1100/"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
 							<Linkedin size={40} color="#ffffff" />
 						</a>
 						<a
-							href="https://github.com/yourprofile"
+							href="https://x.com/Ashu_Panwar1100"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<Twitter size={40} color="#ffffff" />
+						</a>
+
+						<a
+							href="https://github.com/AshutoshPanwar"
 							target="_blank"
 							rel="noopener noreferrer"
 						>

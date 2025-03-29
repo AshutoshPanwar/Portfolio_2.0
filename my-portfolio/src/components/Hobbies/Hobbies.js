@@ -10,10 +10,9 @@ import "./Hobbies.css";
 const Hobbies = () => {
 	const hobbies = [
 		{
-			name: "Reading",
-			description:
-				"Exploring psychology, behavioral economics, and data science books.",
-			image: "https://t4.ftcdn.net/jpg/02/72/07/29/360_F_272072948_HiAHqdWyphxZmePvKKwXjxxRItUURlEY.jpg",
+			name: "Problem Solving",
+			description: "Solving puzzles and logical challenges.",
+			image: "https://www.demandgenreport.com/wp-content/uploads/2025/02/AdobeStock_913779463-scaled.jpeg",
 		},
 		{
 			name: "Music",
@@ -23,12 +22,15 @@ const Hobbies = () => {
 		{
 			name: "Running",
 			description: "Staying active and disciplined through running.",
-			image: "https://physiosc.com/storage/wysiwyg/image_1.png",
+			// image: "https://media.istockphoto.com/id/542197958/photo/running-on-treadmill.jpg?s=612x612&w=0&k=20&c=tcd4FsHDKBc9JL_aVhg5WjptucXl6Zijy3zWiSzSfTI=",
+			image: "https://media.istockphoto.com/id/636887598/photo/athlete-running.jpg?s=612x612&w=0&k=20&c=Jt-HCECWiEKRWebmCZoCs2SIuzOj1ea1o5Kg1wTsPoE=",
 		},
 		{
-			name: "Problem Solving",
-			description: "Solving puzzles and logical challenges.",
-			image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTELMCapAxKz_lDKkpKtjQDKrEeRZQfzY_s_g&s",
+			name: "Reading",
+			description:
+				"Exploring psychology, behavioral economics, and data science books.",
+			image: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg",
+			// image: "https://media.istockphoto.com/id/1309972622/photo/young-man-reading-a-book-in-peace-and-making-personal-growth-spending-time-at-home-in-the.jpg?s=612x612&w=0&k=20&c=DuO6_aicS7OSzfa_-lXvgNBxH2-K8TbIeZdI9IlUMP8=",
 		},
 	];
 

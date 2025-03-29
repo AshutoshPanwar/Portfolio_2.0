@@ -2,41 +2,58 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Code, LineChart, Brain, Eye, Github } from "lucide-react"; // Import Lucide icons
 import "./Projects.css"; // Import the CSS file
+import tedTalksImage from "../../Assets/Images/Ted_Talk.png";
+import Portfolio1 from "../../Assets/Images/Portfolio_1.png";
 
 const Projects = () => {
 	const projects = [
 		{
 			id: 1,
-			title: "Incident Management System",
+			title: "TED-Talks Recommendation System",
 			description:
-				"A REST API built using Django Rest Framework and MySQL for handling user incidents with a super admin panel.",
-			skills: ["Django", "REST API", "MySQL", "Python"],
-			link: "#",
+				"Enhanced user engagement by delivering personalized content that align with individual interests.",
+			skills: [
+				"Python",
+				"Flask",
+				"NumPy",
+				"Scikit-learn",
+				"Git",
+				"CI/CD ",
+			],
+			link: "https://github.com/AshutoshPanwar/TED-Talks_Recommendation_System",
 			icon: <Code className="project-icon" />, // Icon for coding
+			image: tedTalksImage, // Add image URL
 		},
 		{
 			id: 2,
-			title: "Boston Housing Price Prediction",
+			title: "Master Portfolio Website",
 			description:
 				"A machine learning model using linear regression to predict housing prices based on the Boston dataset.",
-			skills: [
-				"Machine Learning",
-				"Linear Regression",
-				"Python",
-				"Scikit-Learn",
-			],
-			link: "#",
+			skills: ["HTML5", "CSS3", "JavaScript", "Git", "Firebase"],
+			link: "https://github.com/AshutoshPanwar/Portfolio",
 			icon: <Brain className="project-icon" />, // Icon for machine learning
+			image: Portfolio1, // Add image URL
 		},
-		{
-			id: 3,
-			title: "Portfolio Website",
-			description:
-				"A modern, visually appealing portfolio website built with React.js to showcase my work in data science.",
-			skills: ["React", "Tailwind CSS", "JavaScript"],
-			link: "#",
-			icon: <LineChart className="project-icon" />, // Icon for data visualization
-		},
+		// {
+		// 	id: 3,
+		// 	title: "Resume WebSite",
+		// 	description:
+		// 		"A modern, visually appealing portfolio website built with React.js to showcase my work in data science.",
+		// 	skills: ["React", "Tailwind CSS", "JavaScript"],
+		// 	link: "#",
+		// 	icon: <LineChart className="project-icon" />,
+		// 	image: "https://via.placeholder.com/400x250",
+		// },
+		// {
+		// 	id: 4,
+		// 	title: "Incident Management System",
+		// 	description:
+		// 		"A REST API built using Django Rest Framework and MySQL for handling user incidents with a super admin panel.",
+		// 	skills: ["Django", "REST API", "MySQL", "Python"],
+		// 	link: "#",
+		// 	icon: <Code className="project-icon" />,
+		// 	image: "https://via.placeholder.com/400x250",
+		// },
 	];
 
 	return (
@@ -94,9 +111,17 @@ const Projects = () => {
 							transition={{ duration: 0.5 }}
 						>
 							<div className="project-image">
-								<span className="image-placeholder">
-									Project Image
-								</span>
+								{project.image ? (
+									<img
+										src={project.image}
+										alt={project.title}
+										className="project-image-content"
+									/>
+								) : (
+									<span className="image-placeholder">
+										Project Image
+									</span>
+								)}
 							</div>
 							<div className="project-details">
 								<div className="project-icon-container">
@@ -133,7 +158,7 @@ const Projects = () => {
 				transition={{ delay: 2, duration: 1 }} // Delay to show after projects
 			>
 				<a
-					href="https://github.com/yourusername" // Replace with your GitHub URL
+					href="https://github.com/AshutoshPanwar" // Replace with your GitHub URL
 					target="_blank"
 					rel="noopener noreferrer"
 					className="more-projects-button"

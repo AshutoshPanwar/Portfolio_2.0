@@ -98,14 +98,14 @@
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
-	color: #8a2be2; /* Purple accent */
+	color: #0080ff; /* Purple accent */
 	text-decoration: none;
 	font-weight: 500;
 	transition: color 0.3s ease;
 }
 
 .view-certificate:hover {
-	color: #00d1ff; /* Neon blue accent on hover */
+	color: #0026ff; /* Neon blue accent on hover */
 }
 
 .view-certificate svg {

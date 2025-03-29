@@ -6,6 +6,16 @@ import Prj from "../../components/Project-Home/Prj";
 import Form from "../../components/Form/Form";
 
 const Hero = () => {
+	const about_button = () => {
+		window.location.href = "/about"; // Replace with your target URL
+	};
+	const skill_button = () => {
+		window.location.href = "/skills"; // Replace with your target URL
+	};
+	const project_button = () => {
+		window.location.href = "/projects"; // Replace with your target URL
+	};
+
 	// Skill card data
 	const skills = [
 		{
@@ -15,20 +25,66 @@ const Hero = () => {
 				"Proficient in Python for data analysis, automation, and machine learning. Key tools: Pandas, NumPy, Scikit-learn.",
 		},
 		{
-			image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png", // Replace with actual URL
-			title: "Data Visualization",
+			image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXO14WAc9UzVLkoUTaDabI0xEhbRJPwlcwhg&s", // Replace with actual URL
+			title: "Linux",
+			description: "",
+		},
+		{
+			image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_aw7SzJUrkBCSBhzOnmm9sZWo_l5cvCdSLw&s", // Replace with actual URL
+			title: "Pandas",
+			description: "",
+		},
+		{
+			image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8GOwYelkyRCn5rHGSAJhRitef065G1EAVYFSDPzsbAeELyLSPmb8ibluWr_Bn54MciGI&usqp=CAU", // Replace with actual URL
+			title: "NumPy",
+			description: "",
+		},
+		{
+			image: "https://images.tpointtech.com/tutorial/matplotlib/images/matplotlib-tutorial.png", // Replace with actual URL
+			title: "MatplotLib",
+			description: "",
+		},
+		{
+			image: "https://images.seeklogo.com/logo-png/33/2/scikit-learn-logo-png_seeklogo-337685.png", // Replace with actual URL
+			title: "Scikit-Learn",
+			description: "",
+		},
+		{
+			image: "https://www.pngmart.com/files/23/Azure-Logo-PNG-Photo.png", // Replace with actual URL
+			title: "Azure",
+			description: "",
+		},
+		{
+			image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVJqy2ZDY9HDSLBdU-Onpi8DIVZqcp2uIghU-KgXWi9vofCDYTWoWxSoGRDVbxez5PNLI&usqp=CAU", // Replace with actual URL
+			title: "GCP",
+			description: "",
+		},
+		{
+			image: "https://cdn.inspireuplift.com/uploads/images/seller_products/31661/1702633077_AWSlogoAmazonWebServiceslogo.png", // Replace with actual URL
+			title: "AWS",
+			description: "",
+		},
+		{
+			image: "https://cdn.iconscout.com/icon/free/png-256/free-git-logo-icon-download-in-svg-png-gif-file-formats--programming-langugae-language-pack-logos-icons-1175219.png", // Replace with actual URL
+			title: "Git",
 			description:
 				"Expertise in creating interactive visualizations using tools like Matplotlib, Seaborn, and Tableau.",
 		},
 		{
-			image: "https://www.pngitem.com/pimgs/m/346-3460443_machine-learning-course-near-me-machine-learning-logo.png", // Replace with actual URL
-			title: "Machine Learning",
+			image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrwLTVVljw19zE8EVH4Ix7_Ea8xgUaqD3x7IWH6JborEZD6TZJMv0cUJ7M-Rxrf5uYvjo&usqp=CAU", // Replace with actual URL
+			title: "Git-Hub",
+			description:
+				"Expertise in creating interactive visualizations using tools like Matplotlib, Seaborn, and Tableau.",
+		},
+		{
+			image: "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png", // Replace with actual URL
+			title: "React",
 			description:
 				"Skilled in building and deploying ML models using TensorFlow, Keras, and PyTorch.",
 		},
 		{
-			image: "https://example.com/database-management.png", // Replace with actual URL
-			title: "Database Management",
+			image: "https://5.imimg.com/data5/HT/HX/YO/GLADMIN-13634783/selection-208.png", // Replace with actual URL
+			title: "Flask",
 			description:
 				"Experience with SQL and NoSQL databases like MySQL, MongoDB, and PostgreSQL.",
 		},
@@ -63,7 +119,7 @@ const Hero = () => {
 		if (!isPaused) {
 			interval = setInterval(() => {
 				setScrollPosition(prev => (prev + 300) % (skills.length * 300));
-			}, 3000); // Auto-scroll every 3 seconds
+			}, 1000); // Auto-scroll every 3 seconds
 		}
 		return () => clearInterval(interval);
 	}, [isPaused, skills.length]);
@@ -82,18 +138,22 @@ const Hero = () => {
 						</span>
 					</h1>
 					<p className="hero-subtext">
-						I specialize in{" "}
-						<span className="focus-text">data science</span>,{" "}
-						<span className="focus-text">machine learning</span>,
-						and{" "}
+						solve complex problems. Learning to harness data, build
+						intelligent models, and craft decision-making strategies{" "}
 						<span className="focus-text">
-							decision-making strategies
-						</span>{" "}
-						to solve complex problems.
+							to solve complex problems.
+						</span>
 					</p>
-					<button className="cta-button">Explore My Work</button>
+					<a
+						href="https://drive.google.com/file/d/1X_WgZigkIUBTCLphkZ4FoluKq-t_GPtM/view?usp=sharing"
+						className="cta-button"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Hire Me!
+					</a>
 					<p className="hero-note">
-						Let’s build the future with data-driven solutions.
+						The future belongs to those who turn data into action.
 					</p>
 				</div>
 			</section>
@@ -105,7 +165,7 @@ const Hero = () => {
 						<span className="highlight-About"> Hi, I am </span>
 						Ashutosh Panwar
 						<span className="highlight-About">
-							, a data scientist.
+							, an aspiring data scientist.
 						</span>
 					</h1>
 				</div>
@@ -130,8 +190,9 @@ const Hero = () => {
 						whileHover={{ scale: 1.05 }}
 						whileTap={{ scale: 0.95 }}
 						className="who-we-are-left-Home-button"
+						onClick={about_button}
 					>
-						More About Me
+						Uncover My Story?
 					</motion.button>
 				</motion.div>
 
@@ -159,6 +220,7 @@ const Hero = () => {
 						evolving, learning, and building. I believe that data
 						science isn’t just about crunching numbers—it’s about
 						<strong>
+							{" "}
 							solving real-world problems, predicting the future,
 							and making an impact.
 						</strong>
@@ -176,6 +238,79 @@ const Hero = () => {
 					</p>
 				</motion.div>
 			</motion.div>
+			<motion.div
+				className="who-we-are-container-Home"
+				initial={{ opacity: 0, y: 20 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ delay: 0.9, duration: 1 }}
+			>
+				{/* Left Side - Bold Text */}
+				<motion.div
+					className="Mob-Rev who-we-are-left-Home"
+					initial={{ opacity: 0, x: -50 }}
+					animate={{ opacity: 1, x: 0 }}
+					transition={{ delay: 1.1, duration: 1 }}
+				>
+					<h2>My Mission</h2>
+					<motion.button
+						whileHover={{ scale: 1.05 }}
+						whileTap={{ scale: 0.95 }}
+						className="who-we-are-left-Home-button"
+						onClick={skill_button}
+					>
+						Why I Do What I Do?
+					</motion.button>
+				</motion.div>
+				{/* Right Side - Paragraph */}
+				<motion.div
+					className="who-we-are-right-Home"
+					initial={{ opacity: 0, x: 50 }}
+					animate={{ opacity: 1, x: 0 }}
+					transition={{ delay: 1.1, duration: 1 }}
+				>
+					<p>
+						In a world driven by data, I strive to bridge the gap
+						between <strong>raw information</strong> and{" "}
+						<strong>meaningful impact</strong>. My mission is to
+						harness the power of{" "}
+						<strong>AI, machine learning, and analytics</strong> to
+						uncover insights, solve complex problems, and drive
+						innovation.
+					</p>
+					<br />
+					<p>
+						I believe that{" "}
+						<strong>data is more than just numbers</strong>
+						—it’s the key to unlocking new possibilities, making
+						smarter decisions, and shaping the future. Through
+						continuous{" "}
+						<strong>
+							learning, experimentation, and real-world
+							applications
+						</strong>
+						, I am dedicated to building solutions that are not just{" "}
+						<strong>intelligent</strong> but also{" "}
+						<strong>practical and transformative</strong>.
+					</p>
+					<br />
+					<p>
+						My journey is fueled by{" "}
+						<strong>
+							curiosity, persistence, and a passion for
+							problem-solving
+						</strong>
+						. As I evolve in the field of data science, my goal is
+						to contribute to a future where technology and data work
+						together to make a difference.
+					</p>
+					<br />
+					<p>
+						<strong>
+							Let’s decode the future, one dataset at a time.
+						</strong>
+					</p>
+				</motion.div>
+			</motion.div>
 
 			{/* Blue Ribon */}
 			<section className="intro-section">
@@ -183,8 +318,8 @@ const Hero = () => {
 					<h1 className="intro-heading">
 						<span className="highlight">Data tells a story</span>—I
 						make sure it’s the right one.{" "}
-						<span className="highlight">I’m [Your Name]</span>, a
-						data scientist passionate about AI, analytics, and
+						<span className="highlight">I’m Ashutohs Panwar</span>,
+						a data scientist passionate about AI, analytics, and
 						machine learning.
 					</h1>
 				</div>
@@ -270,8 +405,9 @@ const Hero = () => {
 						className="skill-cta-button"
 						whileHover={{ scale: 1.1 }}
 						whileTap={{ scale: 0.9 }}
+						onClick={skill_button}
 					>
-						See My Projects
+						What I Bring to the Table?
 					</motion.button>
 				</div>
 			</motion.section>

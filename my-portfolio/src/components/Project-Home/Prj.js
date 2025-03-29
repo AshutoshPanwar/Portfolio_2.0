@@ -1,40 +1,51 @@
 import React, { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion"; // Import motion from framer-motion
 import "./Prj.css";
+import tedTalksImage from "../../Assets/Images/Ted_Talk.png";
+import Portfolio1 from "../../Assets/Images/Portfolio_1.png";
 
 const projects = [
 	{
 		id: 1,
-		image: "https://via.placeholder.com/400",
-		name: "Project 1",
-		description: "This is a description for Project 1.",
-		technologies: ["React", "Node.js", "MongoDB"],
-		link: "#", // Add project link here
+		image: tedTalksImage,
+		name: "TED-Talks Recommendation System",
+		description:
+			"Enhanced user engagement by delivering personalized content that align with individual interests.",
+		technologies: [
+			"Python",
+			"Flask",
+			"NumPy",
+			"Scikit-learn",
+			"Git",
+			"CI/CD ",
+		],
+		link: "https://github.com/AshutoshPanwar/TED-Talks_Recommendation_System", // Add project link here
 	},
 	{
 		id: 2,
-		image: "https://ichef.bbci.co.uk/news/480/cpsprodpb/1766/production/_99709950_english.jpg.webp",
-		name: "Project 2",
-		description: "This is a description for Project 2.",
-		technologies: ["Vue", "Express", "MySQL"],
-		link: "#", // Add project link here
+		image: Portfolio1,
+		name: "Master Portfolio Website",
+		description:
+			"A machine learning model using linear regression to predict housing prices based on the Boston dataset.",
+		technologies: ["HTML5", "CSS3", "JavaScript", "Git", "Firebase"],
+		link: "https://github.com/AshutoshPanwar/TED-Talks_Recommendation_System", // Add project link here
 	},
-	{
-		id: 3,
-		image: "https://ichef.bbci.co.uk/news/480/cpsprodpb/1766/production/_99709950_english.jpg.webp",
-		name: "Project 3",
-		description: "This is a description for Project 3.",
-		technologies: ["Vue", "Express", "MySQL"],
-		link: "#", // Add project link here
-	},
-	{
-		id: 4,
-		image: "https://ichef.bbci.co.uk/news/480/cpsprodpb/1766/production/_99709950_english.jpg.webp",
-		name: "Project 4",
-		description: "This is a description for Project 4.",
-		technologies: ["Vue", "Express", "MySQL"],
-		link: "#", // Add project link here
-	},
+	// {
+	// 	id: 3,
+	// 	image: "https://ichef.bbci.co.uk/news/480/cpsprodpb/1766/production/_99709950_english.jpg.webp",
+	// 	name: "Project 3",
+	// 	description: "This is a description for Project 3.",
+	// 	technologies: ["Vue", "Express", "MySQL"],
+	// 	link: "#",
+	// },
+	// {
+	// 	id: 4,
+	// 	image: "https://ichef.bbci.co.uk/news/480/cpsprodpb/1766/production/_99709950_english.jpg.webp",
+	// 	name: "Project 4",
+	// 	description: "This is a description for Project 4.",
+	// 	technologies: ["Vue", "Express", "MySQL"],
+	// 	link: "#",
+	// },
 	// Add more projects as needed
 ];
 
@@ -57,10 +68,35 @@ const ProjectionSection = () => {
 		};
 	}, []);
 
+	// Animation variants
+	const headingVariants = {
+		hidden: { opacity: 0, y: -20 },
+		visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+	};
+
+	const cardVariants = {
+		hidden: { opacity: 0, y: 20 },
+		visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+	};
+
+	const buttonVariants = {
+		hidden: { opacity: 0, scale: 0.8 },
+		visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+	};
+
+	const project_button = () => {
+		window.location.href = "/projects"; // Replace with your target URL
+	};
+
 	return (
 		<div className="section-container" ref={sectionRef}>
 			{/* Updated Heading Container */}
-			<div className={`heading-container ${visible ? "visible" : ""}`}>
+			<motion.div
+				className={`heading-container ${visible ? "visible" : ""}`}
+				variants={headingVariants}
+				initial="hidden"
+				animate={visible ? "visible" : "hidden"}
+			>
 				{/* Left Column */}
 				<div className="prj-left-column">
 					<motion.h1
@@ -80,14 +116,17 @@ const ProjectionSection = () => {
 						project is a step towards excellence.
 					</p>
 				</div>
-			</div>
+			</motion.div>
 
 			{/* Cards Container */}
 			<div className={`cards-container ${visible ? "visible" : ""}`}>
 				{projects.map(project => (
-					<div
+					<motion.div
 						key={project.id}
 						className={`card ${visible ? "visible" : ""}`}
+						variants={cardVariants}
+						initial="hidden"
+						animate={visible ? "visible" : "hidden"}
 					>
 						<img
 							src={project.image}
@@ -111,20 +150,24 @@ const ProjectionSection = () => {
 								View Project
 							</a>
 						</div>
-					</div>
+					</motion.div>
 				))}
 			</div>
 
 			{/* Discover More Button */}
-			<div
+			<motion.div
 				className={`discover-more-container ${
 					visible ? "visible" : ""
 				}`}
+				variants={buttonVariants}
+				initial="hidden"
+				animate={visible ? "visible" : "hidden"}
+				onClick={project_button}
 			>
 				<a href="#" className="discover-more-button">
-					Discover More
+					See My Work!
 				</a>
-			</div>
+			</motion.div>
 		</div>
 	);
 };

@@ -127,8 +127,8 @@
 /* Skill Icon Image */
 /* ==================== */
 .skill-icon-image {
-	width: 24px; /* Set icon size */
-	height: 24px; /* Set icon size */
+	width: 50px;
+	/* height: 24px;  */
 	object-fit: contain; /* Ensure the image fits within the container */
 }
 

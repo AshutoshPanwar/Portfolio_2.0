@@ -77,6 +77,7 @@
 	display: block; /* Make the button a block element */
 	width: fit-content; /* Adjust width to fit content */
 	text-align: center; /* Center text inside the button */
+	text-decoration: none;
 }
 
 .cta-button:hover {
@@ -152,7 +153,8 @@
 }
 
 .skill-card {
-	background-color: #1e1e1e; /* Dark background for cards */
+	background-color: #000000; /* Dark background for cards */
+	border: 1px solid rgba(255, 255, 255, 0.343);
 	color: #fff; /* White text */
 	border-radius: 12px;
 	padding: 1.5rem;
@@ -165,7 +167,8 @@
 }
 
 .skill-card:hover {
-	transform: scale(1.05); /* Slightly enlarge on hover */
+	transform: scale(1.1);
+	box-shadow: 0 8px 24px rgba(255, 255, 255, 0.294);
 }
 .skill-image {
 	margin-bottom: 1rem; /* Space between image and text */
@@ -237,8 +240,8 @@
 	display: inline-block;
 	padding: 0.75rem 2rem;
 	background-color: transparent; /* Transparent background */
-	border: 2px solid #fff; /* White border for accent */
-	color: #fff; /* White text */
+	border: 2px solid #0099ff; /* White border for accent */
+	color: #ffffff; /* White text */
 	border-radius: 50px;
 	font-size: 1.2rem;
 	font-family: "Poppins", sans-serif;
@@ -344,9 +347,9 @@
 	/* Style for the "More About Me" button */
 	padding: 10px 20px;
 	font-size: 16px;
-	color: black; /* Black text */
-	background-color: rgba(0, 0, 0, 0); /* Black background */
-	border: 2px solid black; /* Black border */
+	color: rgb(255, 255, 255); /* Black text */
+	background-color: rgb(0, 0, 0); /* Black background */
+	border: 2px solid rgb(0, 0, 0); /* Black border */
 	border-radius: 5px;
 	cursor: pointer;
 	margin-top: 10px;
@@ -356,8 +359,8 @@
 }
 
 .who-we-are-left-Home button:hover {
-	background-color: black; /* Blue background on hover */
-	color: white; /* White text on hover */
+	background-color: rgb(255, 255, 255); /* Blue background on hover */
+	color: black; /* White text on hover */
 	border-color: black; /* Blue border on hover */
 }
 
@@ -514,5 +517,9 @@
 
 	.skills-description {
 		font-size: 2rem;
+	}
+
+	.Mob-Rev {
+		flex-direction: -1;
 	}
 }

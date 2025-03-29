@@ -77,13 +77,19 @@
 /* Project Image */
 .project-image {
 	width: 40%; /* Adjust image width */
-	height: 300px; /* Fixed height for image */
+	height: auto; /* Allow height to adjust automatically */
 	background-color: #333; /* Placeholder background */
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	color: #aaa; /* Placeholder text color */
 	margin: 1rem;
+}
+
+.project-image img {
+	width: 100%; /* Make image responsive */
+	height: auto; /* Maintain aspect ratio */
+	object-fit: cover; /* Cover the area without distortion */
 }
 
 /* Project Details */
@@ -151,7 +157,7 @@
 	border-radius: 10px;
 	text-decoration: none;
 	transition: opacity 0.3s ease;
-	justify-content: flex-start; /* Left-align link */
+	justify-content: flex-start; /* Left -align link */
 }
 
 .project-link:hover {
@@ -230,7 +236,7 @@
 
 	.project-image {
 		width: 100%; /* Full width for image on mobile */
-		height: 200px; /* Adjust height for mobile */
+		height: auto; /* Adjust height for mobile */
 	}
 
 	.project-details {

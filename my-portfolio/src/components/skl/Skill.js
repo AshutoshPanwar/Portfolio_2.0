@@ -1,5 +1,4 @@
 import React from "react";
-import { motion, useInView } from "framer-motion";
 import "./Skill.css";
 
 const Skills = () => {
@@ -13,123 +12,145 @@ const Skills = () => {
 					icon: "https://img.icons8.com/color/512/python.png",
 				},
 				{
-					name: "JavaScript",
-					proficiency: 85,
-					icon: "/icons/javascript.png",
+					name: "C++",
+					proficiency: 80,
+					icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/800px-ISO_C%2B%2B_Logo.svg.png",
 				},
-				{ name: "Java", proficiency: 75, icon: "/icons/java.png" },
+				{
+					name: "Linux",
+					proficiency: 85,
+					icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAx6camOf_G96Zcs2Zj34Yjmy0ysPd-p0oJQ&s",
+				},
 			],
 		},
 		{
 			category: "Data Science & ML",
 			items: [
 				{
-					name: "Machine Learning",
+					name: "NumPy",
 					proficiency: 80,
-					icon: "/icons/ml.png",
+					icon: "https://neuraspike.com/wp-content/uploads/2020/11/thumbnail_numpy_tutorial_logo-neuraspike.png.png",
 				},
 				{
-					name: "Deep Learning",
+					name: "Pandas",
 					proficiency: 70,
-					icon: "/icons/dl.png",
+					icon: "https://www.netdata.cloud/img/pandas.png",
 				},
 				{
 					name: "Statistics",
 					proficiency: 85,
-					icon: "/icons/stats.png",
+					icon: "https://i.pinimg.com/474x/cc/aa/c9/ccaac9b2ce19a131fa386c3b7cc0c923.jpg",
+				},
+				{
+					name: "Statistics",
+					proficiency: 85,
+					icon: "https://images.sftcdn.net/images/t_app-icon-m/p/917c77e8-96d1-11e6-8453-00163ed833e7/3780880766/mysql-com-icon.png",
+				},
+				{
+					name: "Statistics",
+					proficiency: 85,
+					icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Microsoft_Excel_2013-2019_logo.svg/1085px-Microsoft_Excel_2013-2019_logo.svg.png",
+				},
+				{
+					name: "Statistics",
+					proficiency: 85,
+					icon: "https://pypi-camo.freetls.fastly.net/e04fcdcd86e25efd2d53f9dd07e2e57e95969f4b/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f73636970792f73636970792f6d61696e2f646f632f736f757263652f5f7374617469632f6c6f676f2e737667",
 				},
 			],
 		},
 		{
-			category: "Visualization Tools",
+			category: "Web Technologies",
 			items: [
 				{
-					name: "Tableau",
-					proficiency: 90,
-					icon: "/icons/tableau.png",
+					name: "React",
+					proficiency: 85,
+					icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
 				},
 				{
-					name: "Matplotlib",
-					proficiency: 80,
-					icon: "/icons/matplotlib.png",
+					name: "Flask",
+					proficiency: 85,
+					icon: "https://images.tpointtech.com/tutorial/flask/images/flask-tutorial.png",
 				},
 				{
-					name: "Seaborn",
-					proficiency: 75,
-					icon: "/icons/seaborn.png",
+					name: "Django",
+					proficiency: 85,
+					icon: "https://console.kamatera.com/assets/images/os/os_django.png",
 				},
 			],
 		},
-		{
-			category: "Big Data & Databases",
-			items: [
-				{ name: "Spark", proficiency: 85, icon: "/icons/spark.png" },
-				{ name: "Hadoop", proficiency: 75, icon: "/icons/hadoop.png" },
-				{ name: "SQL", proficiency: 90, icon: "/icons/sql.png" },
-			],
-		},
+
 		{
 			category: "Cloud & Deployment",
 			items: [
-				{ name: "AWS", proficiency: 80, icon: "/icons/aws.png" },
-				{ name: "Docker", proficiency: 75, icon: "/icons/docker.png" },
 				{
-					name: "Kubernetes",
+					name: "AWS",
+					proficiency: 80,
+					icon: "https://i.scdn.co/image/ab6765630000ba8a49f81331af04ec3614a5a741",
+				},
+				{
+					name: "Azure",
+					proficiency: 75,
+					icon: "https://www.vaisulweb.com/wp-content/uploads/2019/02/azure_logo_794_new.png",
+				},
+				{
+					name: "GCP",
 					proficiency: 70,
-					icon: "/icons/kubernetes.png",
+					icon: "https://avatars.githubusercontent.com/u/2810941?s=280&v=4",
+				},
+				{
+					name: "GCP",
+					proficiency: 70,
+					icon: "https://www.docker.com/app/uploads/2023/05/symbol_blue-docker-logo.png",
+				},
+				{
+					name: "GCP",
+					proficiency: 70,
+					icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/1200px-Kubernetes_logo_without_workmark.svg.png",
+				},
+			],
+		},
+		{
+			category: "Tools",
+			items: [
+				{
+					name: "Git",
+					proficiency: 90,
+					icon: "https://avatars.githubusercontent.com/u/18133?s=280&v=4",
+				},
+				{
+					name: "GitHub",
+					proficiency: 80,
+					icon: "https://researchcomputing.princeton.edu/sites/g/files/toruqf7036/files/styles/freeform_750w/public/2021-02/Github.png?h=0adafebd&itok=ifc6IOIP",
+				},
+				{
+					name: "Visual Studio Code",
+					proficiency: 75,
+					icon: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg",
+				},
+				{
+					name: "Jupyter Notebook",
+					proficiency: 75,
+					icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/663px-Jupyter_logo.svg.png",
 				},
 			],
 		},
 	];
 
-	// Use the useInView hook to detect when elements enter the viewport
-	const ref = React.useRef(null);
-	const isInView = useInView(ref, { once: true, amount: 0.5 });
-
 	return (
-		<motion.section
-			className="skills-section-sk"
-			initial={{ opacity: 0, y: 20 }}
-			animate={{ opacity: 1, y: 0 }}
-			transition={{ duration: 1 }}
-		>
+		<section className="skills-section-sk">
 			<h2>My Skills</h2>
 			<p className="skills-description-sk">
-				Here are some of the skills I have developed over the years.
+				Over the years, I’ve honed a powerful skill set that defines my
+				expertise and passion.
 			</p>
-			<div className="skills-container-sk" ref={ref}>
+			<div className="skills-container-sk">
 				{skills.map((category, index) => (
 					<div key={index} className="skills-category-sk">
-						<motion.h3
-							initial={{ opacity: 0, y: 20 }}
-							animate={isInView ? { opacity: 1, y: 0 } : {}}
-							transition={{ duration: 0.5, delay: index * 0.2 }}
-						>
-							{category.category}
-						</motion.h3>
-						<motion.hr
-							initial={{ width: 0 }}
-							animate={isInView ? { width: "100%" } : {}}
-							transition={{
-								duration: 0.5,
-								delay: index * 0.2 + 0.2,
-							}}
-						/>
+						<h3>{category.category}</h3>
+						<hr />
 						<div className="skills-grid-sk">
 							{category.items.map((skill, idx) => (
-								<motion.div
-									key={idx}
-									className="skill-card-sk"
-									whileHover={{ scale: 1.05 }}
-									initial={{ opacity: 0, y: 20 }}
-									animate={
-										isInView ? { opacity: 1, y: 0 } : {}
-									}
-									transition={{
-										duration: 0.5,
-										delay: index * 0.2 + idx * 0.1,
-									}}
-								>
+								<div key={idx} className="skill-card-sk">
 									<div className="skill-icon-sk">
 										{typeof skill.icon === "string" ? (
 											<img
@@ -152,13 +173,13 @@ const Skills = () => {
 											></div>
 										</div>
 									</div>
-								</motion.div>
+								</div>
 							))}
 						</div>
 					</div>
 				))}
 			</div>
-		</motion.section>
+		</section>
 	);
 };
 
