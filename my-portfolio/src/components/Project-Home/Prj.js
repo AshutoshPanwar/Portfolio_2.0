@@ -92,7 +92,7 @@ const ProjectionSection = () => {
 		<div className="section-container" ref={sectionRef}>
 			{/* Updated Heading Container */}
 			<motion.div
-				className={`heading-container ${visible ? "visible" : ""}`}
+				className={`prj-heading-container ${visible ? "visible" : ""}`}
 				variants={headingVariants}
 				initial="hidden"
 				animate={visible ? "visible" : "hidden"}
