@@ -98,6 +98,15 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+	.about-heading {
+		font-size: clamp(10rem); /* Shrinks dynamically */
+		text-align: center;
+	}
+
+	.about-description {
+		text-align: center;
+	}
+
 	.who-we-are-container,
 	.my-story-container,
 	.my-mission-container {
@@ -122,6 +131,23 @@
 }
 
 @media (max-width: 480px) {
+	.about-section {
+		padding: 3rem 1rem;
+	}
+	.about-heading {
+		font-size: clamp(5.5rem); /* Further adjusted for mobile */
+	}
+
+	.about-services {
+		grid-template-columns: 1fr; /* 1 card per row on mobile */
+	}
+
+	.who-we-are-container,
+	.my-story-container,
+	.my-mission-container {
+		padding: 2rem 0.5rem;
+	}
+
 	.who-we-are-left h2,
 	.my-story-left h2,
 	.my-mission-left h2 {
@@ -134,30 +160,5 @@
 	.my-mission-right p {
 		font-size: 1rem; /* Adjust text size for mobile */
 		text-align: left; /* Center text on mobile */
-	}
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-	.about-heading {
-		font-size: clamp(10rem); /* Shrinks dynamically */
-		text-align: left;
-	}
-
-	.about-description {
-		text-align: left;
-	}
-}
-
-@media (max-width: 480px) {
-	.about-section {
-		padding: 5rem 2rem;
-	}
-	.about-heading {
-		font-size: clamp(5.5rem); /* Further adjusted for mobile */
-	}
-
-	.about-services {
-		grid-template-columns: 1fr; /* 1 card per row on mobile */
 	}
 }

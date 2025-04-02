@@ -126,8 +126,8 @@
 	color: #ffffff;
 	border: 1px solid rgb(0, 119, 255);
 	font-size: clamp(0.8rem, 1.5vw, 0.9rem); /* Responsive font size */
-	padding: clamp(0.25rem, 0.5vw, 0.75rem); /* Responsive padding */
-	border-radius: 12px;
+	padding: clamp(0.25rem, 0.5vw, 0.75rem) clamp(0.8rem, 0.5vw, 0.75rem); /* Responsive padding */
+	border-radius: 20px;
 }
 
 /* Project Link */

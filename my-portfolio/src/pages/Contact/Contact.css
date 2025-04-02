@@ -1,7 +1,8 @@
+/* Contact.css */
 /* Contact Section */
 .contact-section-sec {
 	background-color: #000; /* Darkest black background */
-	padding: 4rem 2rem;
+	padding: clamp(2rem, 5vw, 4rem); /* Responsive padding */
 	text-align: center;
 }
 
@@ -18,7 +19,7 @@
 
 /* Heading */
 .contact-heading-sec {
-	font-size: 15rem;
+	font-size: clamp(5rem, 15vw, 15rem); /* Responsive font size */
 	color: #fff;
 	font-family: "Poppins", sans-serif;
 	font-weight: 600;
@@ -41,43 +42,34 @@
 
 /* Subheading */
 .contact-subheading-sec {
-	font-size: 1.5rem;
+	font-size: clamp(1.2rem, 2vw, 1.5rem); /* Responsive font size */
 	color: #ddd;
 	font-family: "Open Sans", sans-serif;
 	margin-top: 1rem;
 }
 
 /* Responsive Styles */
-@media (max-width: 1024px) {
-	.contact-heading-sec {
-		font-size: 10rem;
-	}
-
-	.contact-subheading-sec {
-		font-size: 2rem;
-	}
-}
 
 @media (max-width: 768px) {
 	.contact-heading-sec {
-		font-size: 10rem;
-		text-align: left;
+		font-size: clamp(8rem, 7vw, 8rem); /* Adjust font size for tablets */
+		text-align: left; /* Align text to the left */
 	}
 
 	.contact-subheading-sec {
-		font-size: 2rem;
-		text-align: left;
+		font-size: clamp(2rem, 2vw, 1.5rem); /* Adjust font size for tablets */
+		text-align: left; /* Align text to the left */
 	}
 }
 
 @media (max-width: 480px) {
 	.contact-heading-sec {
-		font-size: 5.5rem;
-		text-align: left;
+		font-size: clamp(4rem, 6vw, 5.5rem); /* Adjust font size for mobile */
+		text-align: left; /* Align text to the left */
 	}
 
 	.contact-subheading-sec {
-		font-size: 2rem;
-		text-align: left;
+		font-size: clamp(1.5rem, 2vw, 2rem); /* Adjust font size for mobile */
+		text-align: left; /* Align text to the left */
 	}
 }
