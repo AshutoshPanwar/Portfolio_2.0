@@ -131,6 +131,9 @@
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
+	.contact-section {
+		padding: 2rem 2rem;
+	}
 	.left-column h1 {
 		font-size: 3rem;
 	}
@@ -141,6 +144,9 @@
 }
 
 @media (max-width: 768px) {
+	.contact-section {
+		padding: 2rem 2rem;
+	}
 	.contact-container {
 		flex-direction: column;
 		padding: 1.5rem;
@@ -166,6 +172,9 @@
 }
 
 @media (max-width: 480px) {
+	.contact-section {
+		padding: 2rem 2rem;
+	}
 	.contact-container {
 		padding: 1rem;
 		gap: 1.5rem;
@@ -194,6 +203,9 @@
 }
 
 @media (max-width: 360px) {
+	.contact-section {
+		padding: 2rem 2rem;
+	}
 	.left-column h1 {
 		font-size: 1.75rem;
 	}
