@@ -1,64 +1,55 @@
-/* ==================== */
-/* Skills Section */
-/* ==================== */
+/* Skill.css */
 .skills-section-sk {
-	padding: 4rem 2rem;
-	background-color: #000; /* Black background */
-	color: #fff; /* White text */
+	padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem); /* Responsive padding */
+	background-color: #000;
+	color: #fff;
 	text-align: center;
 }
 
 .skills-section-sk h2 {
-	font-size: 5rem;
-	margin-bottom: 1rem;
-	color: #00d1ff; /* Neon blue accent */
-	background: white; /* Neon blue to purple gradient */
+	font-size: clamp(2.5rem, 8vw, 5rem); /* Responsive font size */
+	margin-bottom: clamp(0.5rem, 1vh, 1rem);
+	color: #00d1ff;
+	background: white;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
 }
 
 .skills-description-sk {
-	font-size: 1.2rem;
-	color: #ccc; /* Light gray for description */
-	margin-bottom: 2rem;
+	font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive font size */
+	color: #ccc;
+	margin-bottom: clamp(1rem, 2vh, 2rem);
 }
 
-/* ==================== */
 /* Skills Container */
-/* ==================== */
 .skills-container-sk {
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 0 2rem;
+	padding: 0 clamp(1rem, 3vw, 2rem); /* Responsive padding */
 }
 
-/* ==================== */
 /* Skills Category */
-/* ==================== */
 .skills-category-sk {
-	margin-bottom: 2rem; /* Space between categories */
+	margin-bottom: clamp(1rem, 2vh, 2rem); /* Responsive margin */
 }
 
 .skills-category-sk h3 {
-	font-size: 2rem;
-	/* margin-bottom: 1rem; */
-	color: #00d1ff; /* Neon blue accent */
+	font-size: clamp(1.5rem, 4vw, 2rem); /* Responsive font size */
 	text-align: left;
+	color: #00d1ff;
 }
 
 .skills-category-sk hr {
-	margin: 1.5rem 0;
+	margin: clamp(0.75rem, 1.5vh, 1.5rem) 0; /* Responsive margin */
 	border: 1px solid rgba(255, 255, 255, 0.491);
 }
 
-/* ==================== */
 /* Skills Grid */
-/* ==================== */
 .skills-grid-sk {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr); /* 1 column on small screens */
-	gap: 1.5rem; /* Space between cards */
+	gap: clamp(0.75rem, 1.5vw, 1.5rem); /* Responsive gap */
 }
 
 @media (min-width: 768px) {
@@ -70,80 +61,80 @@
 	}
 }
 
-/* ==================== */
 /* Skill Card */
-/* ==================== */
 .skill-card-sk {
-	background: black; /* Gradient effect */
+	background: black;
 	border-radius: 16px;
-	padding: 1.5rem;
-	/* box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);  */
+	padding: clamp(1rem, 2vw, 1.5rem); /* Responsive padding */
 	border: 1px solid rgba(255, 255, 255, 0.343);
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 	display: flex;
-	align-items: center; /* Center items vertically */
+	align-items: center;
 }
 
 .skill-card-sk:hover {
-	transform: translateY(-5px); /* Lift on hover */
-	box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05); /* Neon blue shadow on hover */
+	transform: translateY(-5px);
+	box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
 }
 
 .skill-icon-sk {
-	margin-right: 1rem; /* Space between icon and text */
-	color: #00d1ff; /* Neon blue icon color */
+	margin-right: clamp(0.5rem, 1vw, 1rem); /* Responsive margin */
 }
 
 .skill-info-sk {
-	flex-grow: 1; /* Allow info to take remaining space */
+	flex-grow: 1;
 }
 
 .skill-info-sk h4 {
-	font-size: 1.2rem;
-	margin: 0; /* Remove default margin */
+	font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive font size */
 	text-align: left;
-	padding-bottom: 1rem;
+	padding-bottom: clamp(0.5rem, 1vh, 1rem); /* Responsive padding */
 }
 
 .progress-bar-sk {
-	background: rgba(
-		255,
-		255,
-		255,
-		0.2
-	); /* Light background for progress bar */
+	background: rgba(255, 255, 255, 0.2);
 	border-radius: 8px;
-	height: 10px;
-	overflow: hidden; /* Ensure progress doesn't overflow */
+	height: clamp(8px, 1.5vh, 10px); /* Responsive height */
+	overflow: hidden;
 }
 
 .progress-sk {
-	background: rgba(255, 255, 255, 0.851); /* Neon blue progress */
-	height: 100%; /* Full height of the progress bar */
-	transition: width 0.3s ease; /* Smooth transition for progress */
+	background: rgba(255, 255, 255, 0.851);
+	height: 100%;
+	transition: width 0.3s ease;
 }
 
-/* ==================== */
 /* Skill Icon Image */
-/* ==================== */
 .skill-icon-image {
-	width: 50px;
-	/* height: 24px;  */
-	object-fit: contain; /* Ensure the image fits within the container */
+	width: clamp(40px, 8vw, 50px); /* Responsive width */
+	object-fit: contain;
 }
 
-/* ==================== */
-/* Responsive Design */
-/* ==================== */
+/* Media Queries */
 @media (max-width: 768px) {
 	.skills-section-sk h2 {
-		font-size: 2rem; /* Slightly reduce font size for smaller screens */
+		font-size: clamp(5rem, 6vw, 3rem); /* Adjust font size for tablets */
 	}
 
 	.skills-description-sk {
-		font-size: 1rem; /* Slightly reduce font size for smaller screens */
+		font-size: clamp(
+			0.9rem,
+			1.8vw,
+			1rem
+		); /* Adjust font size for tablets */
 	}
 }
 
 @media (max-width: 480px) {
+	.skills-section-sk h2 {
+		font-size: clamp(2.5rem, 5vw, 2.5rem); /* Adjust font size for mobile */
+	}
+
+	.skills-description-sk {
+		font-size: clamp(
+			0.8rem,
+			1.5vw,
+			0.9rem
+		); /* Adjust font size for mobile */
+	}
 }

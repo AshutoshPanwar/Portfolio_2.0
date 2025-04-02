@@ -13,32 +13,34 @@ import Skill from "../../components/skl/Skill";
 
 const Skills = () => {
 	return (
-		<div className="page-container">
-			{/* Full-Screen Heading */}
-			<motion.section
-				className="fullscreen-heading"
-				initial={{ opacity: 0, y: 50 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{ duration: 1 }}
-			>
-				<motion.div
-					className="heading-container"
-					initial={{ opacity: 0, y: -50 }}
+		<>
+			<div className="page-container">
+				{/* Full-Screen Heading */}
+				<motion.section
+					className="skill-fullscreen-heading"
+					initial={{ opacity: 0, y: 50 }}
 					animate={{ opacity: 1, y: 0 }}
-					transition={{ delay: 0.2, duration: 1 }}
+					transition={{ duration: 1 }}
 				>
-					<h1 className="main-heading">
-						<span className="learning">Learning.</span>
-						<span className="adapting">Adapting.</span>
-						<span className="innovating">Innovating.</span>
-					</h1>
-				</motion.div>
-			</motion.section>
+					<motion.div
+						className="skill-heading-container"
+						initial={{ opacity: 0, y: -50 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ delay: 0.2, duration: 1 }}
+					>
+						<h1 className="skill-main-heading">
+							<span className="learning">Learning.</span>
+							<span className="adapting">Adapting.</span>
+							<span className="innovating">Innovating.</span>
+						</h1>
+					</motion.div>
+				</motion.section>
+			</div>
 
 			<Skill />
 			<Certificate />
 			<Hobbies />
-		</div>
+		</>
 	);
 };
 

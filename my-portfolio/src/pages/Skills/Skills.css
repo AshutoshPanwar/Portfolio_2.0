@@ -1,41 +1,43 @@
-/* ==================== */
-/* Full-Screen Heading */
-/* ==================== */
-.fullscreen-heading {
-	display: flex;
-	/* justify-content: center; */
-	align-items: center;
-	height: 100vh; /* Cover the entire screen */
+/* Skills.css */
+.page-container {
 	background-color: #000; /* Black background */
 	color: #fff; /* White text */
 	text-align: center;
 }
 
-.heading-container {
-	width: 100%;
-	text-align: left; /* Left-align the punchline heading */
-	padding-left: 2rem; /* Add some padding to align with the content */
+/* Full-Screen Heading */
+.skill-fullscreen-heading {
+	display: flex;
+	align-items: center;
+	height: 100vh; /* Cover the entire screen */
+	background-color: #000;
+	color: #fff;
+	text-align: center;
 }
 
-.main-heading {
-	font-size: clamp(8vw, 15vw, 18vw); /* Responsive font size */
+.skill-heading-container {
+	width: 100%;
+	text-align: left;
+	padding-left: clamp(1rem, 5vw, 8%); /* Responsive padding */
+}
+
+.skill-main-heading {
+	font-size: clamp(1rem, 13vw, 15rem); /* Responsive font size */
 	font-weight: 900;
 	letter-spacing: -2px;
 	line-height: 0.9;
 	text-transform: uppercase;
-	/* background: linear-gradient(45deg, #0099ff, #9a1aff); */
 	-webkit-background-clip: text;
-	/* -webkit-text-fill-color: transparent; */
 	background-clip: text;
-	margin: 0; /* Remove default margin */
+	margin: 0;
 	display: flex;
-	flex-direction: column; /* Stack words vertically */
-	align-items: flex-start; /* Left-align the words */
+	flex-direction: column;
+	align-items: flex-start;
 }
 
-.main-heading span {
+.skill-main-heading span {
 	color: white;
-	display: block; /* Ensure each word is on a new line */
+	display: block;
 }
 
 .learning {
@@ -43,8 +45,39 @@
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+
+.adapting {
+	background: white;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
 .innovating {
 	background: linear-gradient(90deg, #00ffff, #3333ff, #ff00cc);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+	.skill-main-heading {
+		font-size: clamp(3rem, 15vw, 8rem); /* Adjust font size for tablets */
+	}
+
+	.skill-heading-container {
+		padding-left: clamp(0.5rem, 3vw, 1rem); /* Adjust padding for tablets */
+	}
+}
+
+@media (max-width: 480px) {
+	.skill-fullscreen-heading {
+		height: 70vh;
+	}
+
+	.skill-heading-container {
+		padding: clamp(1rem, 2vw, 0.5rem); /* Adjust padding for mobile */
+	}
+	.skill-main-heading {
+		font-size: clamp(3rem, 10vw, 6rem); /* Adjust font size for mobile */
+	}
 }

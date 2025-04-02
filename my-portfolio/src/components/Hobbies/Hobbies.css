@@ -1,10 +1,8 @@
-/* ==================== */
-/* Hobbies Section */
-/* ==================== */
+/* Hobbies.css */
 .hobbies-section {
-	padding: 4rem 2rem;
-	background-color: #000; /* Black background */
-	color: #fff; /* White text */
+	padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem); /* Responsive padding */
+	background-color: #000;
+	color: #fff;
 	text-align: center;
 }
 
@@ -14,10 +12,9 @@
 }
 
 .hobbies-container h2 {
-	font-size: 5rem;
-	margin-bottom: 1rem;
-	color: #ff7e5f; /* Gradient color for heading */
-	/* background: linear-gradient(45deg, #00c6ff, #0072ff); */
+	font-size: clamp(2.5rem, 8vw, 5rem); /* Responsive font size */
+	margin-bottom: clamp(0.5rem, 1vh, 1rem);
+	color: #ff7e5f;
 	background: white;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -25,17 +22,15 @@
 }
 
 .hobbies-description {
-	font-size: 1.2rem;
-	color: #ccc; /* Light gray for description */
-	margin-bottom: 2rem;
+	font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive font size */
+	color: #ccc;
+	margin-bottom: clamp(1rem, 2vh, 2rem);
 }
 
-/* ==================== */
 /* Carousel Styles */
-/* ==================== */
 .hobbies-carousel {
 	width: 100%;
-	height: 500px; /* Adjust height as needed */
+	height: clamp(300px, 50vh, 500px); /* Responsive height */
 	border-radius: 16px;
 	overflow: hidden;
 	position: relative;
@@ -51,85 +46,114 @@
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	filter: brightness(0.5); /* Darken image for better text visibility */
+	filter: brightness(0.5);
 	transition: filter 0.3s ease;
 }
 
 .carousel-slide:hover .carousel-image {
-	filter: brightness(0.7); /* Darken image further on hover */
+	filter: brightness(0.7);
 }
 
 .carousel-caption {
 	position: absolute;
-	bottom: 2rem;
-	left: 2rem;
+	bottom: clamp(1rem, 2vw, 2rem); /* Responsive positioning */
+	left: clamp(1rem, 2vw, 2rem); /* Responsive positioning */
 	text-align: left;
-	/* background: rgba(0, 0, 0, 0.6);  */
-	padding: 1.5rem;
+	padding: clamp(1rem, 2vw, 1.5rem); /* Responsive padding */
 	border-radius: 8px;
 	transition: background 0.3s ease;
 }
 
 .carousel-slide:hover .carousel-caption {
-	/* background: rgba(0, 0, 0, 0.8);  */
+	/* background: rgba(0, 0, 0, 0.8); */
 }
 
 .carousel-caption h3 {
-	font-size: 5rem;
+	font-size: clamp(2rem, 5vw, 5rem); /* Responsive font size */
 	font-weight: bold;
-	margin-bottom: 0.5rem;
+	margin-bottom: clamp(0.25rem, 0.5vh, 0.5rem); /* Responsive margin */
 	color: #fff;
 }
 
 .carousel-caption p {
-	font-size: 1.2rem;
+	font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive font size */
 	color: #ccc;
 }
 
-/* ==================== */
 /* Swiper Navigation and Pagination */
-/* ==================== */
 .swiper-pagination-bullet {
-	background-color: #fff; /* White pagination bullets */
+	background-color: #fff;
 	opacity: 0.5;
 	transition: opacity 0.3s ease;
 }
 
 .swiper-pagination-bullet-active {
-	background-color: #0072ff; /* Gradient color for active bullet */
+	background-color: #0072ff;
 	opacity: 1;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-	color: #fff; /* White navigation arrows */
+	color: #fff;
 	transition: color 0.3s ease;
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-	color: #0072ff; /* Gradient color on hover */
+	color: #0072ff;
 }
 
-/* ==================== */
 /* Responsive Design */
-/* ==================== */
 @media (max-width: 768px) {
 	.hobbies-carousel {
-		height: 400px; /* Adjust height for smaller screens */
+		height: clamp(
+			250px,
+			40vh,
+			400px
+		); /* Adjust height for smaller screens */
 	}
 
 	.carousel-caption {
-		bottom: 1rem;
-		left: 1rem;
-		padding: 1rem;
+		bottom: clamp(
+			0.5rem,
+			1vw,
+			1rem
+		); /* Adjust positioning for smaller screens */
+		left: clamp(
+			0.5rem,
+			1vw,
+			1rem
+		); /* Adjust positioning for smaller screens */
+		padding: clamp(
+			0.75rem,
+			1.5vw,
+			1rem
+		); /* Adjust padding for smaller screens */
 	}
 
 	.carousel-caption h3 {
-		font-size: 1.5rem;
+		font-size: clamp(
+			1.5rem,
+			4vw,
+			2rem
+		); /* Adjust font size for smaller screens */
 	}
 
 	.carousel-caption p {
-		font-size: 1rem;
+		font-size: clamp(
+			0.9rem,
+			1.8vw,
+			1rem
+		); /* Adjust font size for smaller screens */
+	}
+}
+
+@media (max-width: 480px) {
+	.hobbies-container h2 {
+		font-size: clamp(2rem, 6vw, 3rem); /* Adjust font size for mobile */
+	}
+
+	.hobbies-description {
+		font-size: clamp(0.9rem, 1.8vw, 1rem); /* Adjust font size for mobile */
 	}
 }
