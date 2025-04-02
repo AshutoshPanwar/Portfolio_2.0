@@ -5,17 +5,17 @@
 	height: 100vh; /* Full screen height */
 	display: flex;
 	align-items: center; /* Center vertically */
-	padding-left: 10%; /* Add left padding for symmetry */
+	padding: clamp(5%, 10vw, 8%); /* Add left padding for symmetry */
 }
 
 .hero-content {
-	max-width: 1200px;
+	/* max-width: 1200px; */
 	width: 100%;
 	text-align: left; /* Ensure all content is left-aligned */
 }
 
 .hero-content h1 {
-	font-size: 6rem; /* Large font size */
+	font-size: clamp(3rem, 8vw, 6rem); /* Large font size */
 	font-weight: bold;
 	line-height: 1.2;
 	margin: 0;
@@ -23,8 +23,8 @@
 
 /* Subtext */
 .hero-subtext {
-	font-size: 1.5rem;
-	margin-top: 1rem;
+	font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font size */
+	margin-top: clamp(1rem, 2vh, 1.5rem); /* Responsive margin */
 	color: #ccc; /* Light gray for subtext */
 }
 
@@ -67,12 +67,14 @@
 .cta-button {
 	background-color: #007bff; /* Blue background */
 	color: #fff; /* White text */
-	padding: 1rem 2rem;
-	font-size: 1.2rem;
+	padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem); /* Responsive padding */
+	font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive font size */
+
 	border: none;
 	border-radius: 40px;
 	cursor: pointer;
-	margin-top: 2rem;
+	margin-top: clamp(1rem, 2vh, 2rem); /* Responsive margin */
+
 	transition: background-color 0.3s ease;
 	display: block; /* Make the button a block element */
 	width: fit-content; /* Adjust width to fit content */
@@ -85,8 +87,9 @@
 }
 
 .hero-note {
-	font-size: 1rem;
-	margin-top: 1rem;
+	font-size: clamp(0.8rem, 1.5vw, 1rem); /* Responsive font size */
+	margin-top: clamp(0.5rem, 1vh, 1rem); /* Responsive margin */
+
 	color: #888; /* Light gray for note */
 }
 
@@ -94,7 +97,7 @@
 .skills-section {
 	background-color: #000; /* Match Hero Section background */
 	color: #fff; /* White text */
-	padding: 80px 40px;
+	padding: clamp(40px, 8vh, 80px) clamp(20px, 4vw, 40px);
 }
 
 /* Skills Container */
@@ -102,8 +105,8 @@
 	display: flex; /* Use flexbox for layout */
 	justify-content: space-between; /* Space between columns */
 	align-items: start; /* Align items to the top */
-	padding: 2rem 5rem; /* Add padding around the container */
-	gap: 4rem; /* Gap between columns */
+	padding: clamp(1rem, 2vw, 2rem) clamp(2.5rem, 5vw, 5rem); /* Responsive padding */
+	gap: clamp(2rem, 4vw, 4rem); /* Responsive gap */
 }
 
 /* Left Column */
@@ -118,15 +121,15 @@
 
 /* Headline */
 .skills-headline {
-	font-size: 5rem; /* Adjust font size */
-	font-weight: bold; /* Make the headline bold */
-	text-align: left; /* Left-align the headline */
-	margin-bottom: 1rem; /* Space below the headline */
+	font-size: clamp(2.5rem, 6vw, 5rem); /* Responsive font size */
+	font-weight: bold;
+	text-align: left;
+	margin-bottom: clamp(0.5rem, 1vh, 1rem); /* Responsive margin */
 }
 
 /* Description */
 .skills-description {
-	font-size: 1rem; /* Adjust font size for description */
+	font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive font size */
 	color: #ccc; /* Light gray color for description */
 	text-align: left; /* Left-align the description */
 	line-height: 1.5; /* Improve readability */
@@ -157,10 +160,11 @@
 	border: 1px solid rgba(255, 255, 255, 0.343);
 	color: #fff; /* White text */
 	border-radius: 12px;
-	padding: 1.5rem;
-	margin: 0 1rem; /* Margin for spacing */
-	flex: 0 0 auto; /* Prevent flex items from shrinking */
-	width: 250px; /* Fixed width for cards */
+	padding: clamp(1rem, 2vw, 1.5rem); /* Responsive padding */
+	margin: 0 clamp(0.5rem, 1vw, 1rem); /* Responsive margin */
+	flex: 0 0 auto;
+	width: clamp(200px, 25vw, 250px); /* Responsive width */
+
 	text-align: center; /* Center text */
 	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
 	transition: transform 0.3s; /* Smooth transform on hover */
@@ -180,7 +184,8 @@
 	border-radius: 8px; /* Rounded corners for images */
 }
 .skill-title {
-	font-size: 2rem;
+	font-size: clamp(1.5rem, 3vw, 2rem); /* Responsive font size */
+
 	font-weight: bold;
 	margin-bottom: 10px;
 	color: #fff; /* White text */
@@ -214,9 +219,9 @@
 	color: #000; /* Black text */
 	border: none; /* Remove border */
 	border-radius: 50%; /* Circular buttons */
-	width: 40px; /* Fixed width */
-	height: 40px; /* Fixed height */
-	font-size: 1.5rem; /* Font size for arrow */
+	width: clamp(30px, 5vw, 40px); /* Responsive size */
+	height: clamp(30px, 5vw, 40px); /* Responsive size */
+	font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font size */
 	cursor: pointer; /* Pointer cursor on hover */
 	display: flex; /* Use flexbox for centering */
 	align-items: center; /* Center icon vertically */
@@ -233,17 +238,17 @@
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	margin-top: 40px;
+	margin-top: clamp(20px, 4vh, 40px);
 }
 
 .skill-cta-button {
 	display: inline-block;
-	padding: 0.75rem 2rem;
+	padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem); /* Responsive padding */
 	background-color: transparent; /* Transparent background */
 	border: 2px solid #0099ff; /* White border for accent */
 	color: #ffffff; /* White text */
 	border-radius: 50px;
-	font-size: 1.2rem;
+	font-size: clamp(1rem, 2vw, 1.2rem);
 	font-family: "Poppins", sans-serif;
 	cursor: pointer;
 	text-decoration: none;
@@ -266,7 +271,8 @@
 .intro-section {
 	background-color: #0084ff; /* Blue background */
 	color: #fff; /* White text */
-	padding: 80px 40px;
+	padding: 4rem 7rem; /* Responsive padding */
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -274,12 +280,12 @@
 }
 
 .intro-content {
-	max-width: 1200px;
+	/* max-width: 1200px; */
 	text-align: left;
 }
 
 .intro-heading {
-	font-size: 4rem;
+	font-size: clamp(2rem, 5vw, 4rem);
 	font-weight: bold;
 	line-height: 1.2;
 	margin-bottom: 20px;
@@ -368,7 +374,7 @@
 .intro-section-About {
 	background-color: white; /* Blue background */
 	color: #000000; /* White text */
-	padding: 80px 40px;
+	padding: 4rem 7rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -376,8 +382,8 @@
 }
 
 .intro-content-About {
-	max-width: 1200px;
-	text-align: left;
+	/* max-width: 1200px; */
+	text-align: center;
 }
 
 .intro-heading-About {
@@ -395,62 +401,70 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-	.intro-heading {
-		font-size: 3rem;
+	.hero-section {
+		padding: 3rem;
 	}
+
+	.hero-content h1 {
+		font-size: clamp(3rem, 8vw, 6rem); /* Smaller font size for tablets */
+	}
+
+	.hero-subtext {
+		font-size: clamp(1rem, 2vw, 1.5rem);
+	}
+
+	.intro-section-About {
+		padding: 3rem;
+	}
+	.intro-content-About {
+		text-align: left;
+	}
+	.intro-heading-About {
+		font-size: 4rem;
+	}
+
 	.who-we-are-container-Home,
 	.my-story-container-Home,
 	.my-mission-container-Home {
 		flex-direction: column; /* Stack on smaller screens */
 		gap: 2rem;
-		padding: 2rem;
+		padding: 3rem;
 	}
 
 	.who-we-are-left-Home h2,
 	.my-story-left-Home h2,
 	.my-mission-left-Home h2 {
-		font-size: clamp(3rem, 6vw, 8rem); /* Adjust font size for mobile */
+		font-size: clamp(2.5rem, 6vw, 4rem); /* Adjust font size for mobile */
 		text-align: center; /* Center text on mobile */
 	}
 
 	.who-we-are-right-Home p,
 	.my-story-right-Home p,
 	.my-mission-right-Home p {
-		font-size: 1rem; /* Adjust text size for mobile */
+		font-size: clamp(1rem, 2vw, 1.2rem); /* Adjust text size for mobile */
 		text-align: left; /* Center text on mobile */
 	}
 
-	.hero-section {
+	.intro-section {
 		padding: 3rem;
 	}
 
-	.hero-content h1 {
-		font-size: 3.5rem; /* Smaller font size for tablets */
-	}
-
-	.hero-subtext {
-		font-size: 1.2rem;
+	.intro-heading {
+		font-size: clamp(2.8rem, 5vw, 4rem);
 	}
 
 	.skills-container {
 		flex-direction: column;
 		text-align: center;
-	}
-
-	.left-column {
-		max-width: 100%;
-	}
-
-	.right-column {
-		max-width: 100%;
+		padding: clamp(1rem, 2vw, 2rem);
 	}
 
 	.skills-headline {
-		font-size: 2.5rem;
+		font-size: clamp(5rem, 6vw, 5rem);
 	}
 
 	.skills-description {
-		font-size: 1rem;
+		font-size: clamp(1.2rem, 2vw, 1.2rem);
 	}
 
 	.cta-button {
@@ -464,11 +478,20 @@
 }
 
 @media (max-width: 480px) {
+	.who-we-are-left-Home h2 {
+		text-align: left;
+	}
 	.who-we-are-right-Home p,
 	.my-story-right-Home p,
 	.my-mission-right-Home p {
-		font-size: 1.5rem; /* Adjust text size for mobile */
+		font-size: clamp(1rem, 2vw, 1.2rem); /* Adjust text size for mobile */
 		text-align: left; /* Center text on mobile */
+	}
+	.intro-section-About {
+		padding: 2rem;
+	}
+	.intro-content-About {
+		text-align: left;
 	}
 	.intro-heading-About {
 		font-size: 4rem;
@@ -478,8 +501,12 @@
 		-webkit-text-stroke: 1.5px #000000; /* Slightly thinner stroke for smaller screens */
 	}
 
+	.intro-section {
+		padding: 2rem;
+	}
+
 	.intro-heading {
-		/* font-size: 2.5rem; */
+		font-size: clamp(2.8rem, 5vw, 4rem);
 	}
 
 	.highlight {
@@ -495,28 +522,28 @@
 	}
 
 	.hero-content h1 {
-		font-size: clamp(4rem, 10vw, 5rem); /* Smaller font size for mobile */
+		font-size: clamp(2.8rem, 8vw, 6rem); /* Smaller font size for mobile */
 	}
 
 	.hero-subtext {
-		font-size: 1.5rem;
+		font-size: clamp(1rem, 2vw, 1.5rem);
 	}
 
 	.cta-button {
-		font-size: 1rem;
+		font-size: clamp(1rem, 2vw, 1.2rem);
 		padding: 0.75rem 1.5rem;
 	}
 
 	.skills-container {
-		padding: 5rem 0;
+		padding: clamp(1rem, 2vw, 2rem);
 	}
 	.skills-headline {
-		font-size: 5rem;
+		font-size: clamp(3.5rem, 6vw, 5rem);
 		margin-bottom: 0;
 	}
 
 	.skills-description {
-		font-size: 2rem;
+		font-size: clamp(1.2rem, 2vw, 1.2rem);
 	}
 
 	.Mob-Rev {
