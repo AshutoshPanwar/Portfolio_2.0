@@ -26,9 +26,9 @@ const projects = [
 		image: Portfolio1,
 		name: "Master Portfolio Website",
 		description:
-			"A machine learning model using linear regression to predict housing prices based on the Boston dataset.",
+			"Portfolio is a responsive static Resume website which is created using HTML5, css3 and JS3.",
 		technologies: ["HTML5", "CSS3", "JavaScript", "Git", "Firebase"],
-		link: "https://github.com/AshutoshPanwar/TED-Talks_Recommendation_System", // Add project link here
+		link: "https://github.com/AshutoshPanwar/Portfolio", // Add project link here
 	},
 	// {
 	// 	id: 3,
