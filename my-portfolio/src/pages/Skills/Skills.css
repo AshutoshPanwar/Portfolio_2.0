@@ -71,13 +71,13 @@
 
 @media (max-width: 480px) {
 	.skill-fullscreen-heading {
-		height: 70vh;
+		height: 80vh;
 	}
 
 	.skill-heading-container {
 		padding: clamp(1rem, 2vw, 0.5rem); /* Adjust padding for mobile */
 	}
 	.skill-main-heading {
-		font-size: clamp(3rem, 10vw, 6rem); /* Adjust font size for mobile */
+		font-size: clamp(15vw, 10vw, 6rem); /* Adjust font size for mobile */
 	}
 }
