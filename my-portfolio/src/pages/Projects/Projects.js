@@ -57,116 +57,142 @@ const Projects = () => {
 	];
 
 	return (
-		<motion.section
-			className="projects-section" // Updated class name
-			initial={{ opacity: 0, y: 50 }}
-			animate={{ opacity: 1, y: 0 }}
-			transition={{ duration: 1 }}
-		>
-			{/* Punchline Heading */}
-			<motion.div
-				className="projects-heading-container"
-				initial={{ opacity: 0, y: -50 }}
+		<>
+			<motion.section
+				className="projects-section" // Updated class name
+				initial={{ opacity: 0, y: 50 }}
 				animate={{ opacity: 1, y: 0 }}
-				transition={{ delay: 0.2, duration: 1 }}
+				transition={{ duration: 1 }}
 			>
-				<h1 className="projects-heading">
-					<span className="My">My</span> Projects
-				</h1>
-			</motion.div>
-
-			{/* Introduction Section */}
-			<motion.div
-				className="projects-intro"
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				transition={{ delay: 0.5, duration: 1 }}
-			>
-				<p className="intro-text">
-					"Every project I work on is a step forward in mastering data
-					science and technology. From predictive analytics to
-					real-world automation, my work is driven by curiosity and
-					precision. Here, you’ll find a showcase of my best projects,
-					where complex problems meet innovative solutions."
-				</p>
-			</motion.div>
-
-			{/* Projects List */}
-			<motion.div
-				className="projects-content"
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				transition={{ delay: 1.5, duration: 1 }} // Delay to show after intro
-			>
-				<div className="projects-grid">
-					{projects.map((project, index) => (
-						<motion.div
-							key={project.id}
-							className={`project-card ${
-								index % 2 !== 0 ? "reverse" : ""
-							}`} // Add "reverse" class for alternating rows
-							whileHover={{ scale: 1.05 }}
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.5 }}
-						>
-							<div className="project-image">
-								{project.image ? (
-									<img
-										src={project.image}
-										alt={project.title}
-										className="project-image-content"
-									/>
-								) : (
-									<span className="image-placeholder">
-										Project Image
-									</span>
-								)}
-							</div>
-							<div className="project-details">
-								<div className="project-icon-container">
-									{project.icon} {/* Render the icon */}
-								</div>
-								<h3>{project.title}</h3>
-								<p>{project.description}</p>
-								<div className="project-skills">
-									{project.skills.map((skill, index) => (
-										<span key={index} className="skill-tag">
-											{skill}
-										</span>
-									))}
-								</div>
-								<a
-									href={project.link}
-									target="_blank"
-									rel="noopener noreferrer"
-									className="project-link"
-								>
-									<Eye className="view-icon" /> View Project
-								</a>
-							</div>
-						</motion.div>
-					))}
-				</div>
-			</motion.div>
-
-			{/* More Projects Button */}
-			<motion.div
-				className="more-projects-button-container"
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				transition={{ delay: 2, duration: 1 }} // Delay to show after projects
-			>
-				<a
-					href="https://github.com/AshutoshPanwar" // Replace with your GitHub URL
-					target="_blank"
-					rel="noopener noreferrer"
-					className="more-projects-button"
+				{/* Punchline Heading */}
+				<motion.div
+					className="projects-heading-container"
+					initial={{ opacity: 0, y: -50 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ delay: 0.2, duration: 1 }}
 				>
-					<Github className="github-icon" /> More Projects on GitHub
-				</a>
-			</motion.div>
-		</motion.section>
+					<h1 className="projects-heading">
+						<span className="My">My</span> Projects
+					</h1>
+				</motion.div>
+
+				{/* Introduction Section */}
+				<motion.div
+					className="projects-intro"
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ delay: 0.5, duration: 1 }}
+				>
+					<p className="intro-text">
+						"Every project I work on is a step forward in mastering
+						data science and technology. From predictive analytics
+						to real-world automation, my work is driven by curiosity
+						and precision. Here, you’ll find a showcase of my best
+						projects, where complex problems meet innovative
+						solutions."
+					</p>
+				</motion.div>
+
+				{/* Projects List */}
+				<motion.div
+					className="projects-content"
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ delay: 1.5, duration: 1 }} // Delay to show after intro
+				>
+					<div className="projects-grid">
+						{projects.map((project, index) => (
+							<motion.div
+								key={project.id}
+								className={`project-card ${
+									index % 2 !== 0 ? "reverse" : ""
+								}`} // Add "reverse" class for alternating rows
+								whileHover={{ scale: 1.05 }}
+								initial={{ opacity: 0, y: 20 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ duration: 0.5 }}
+							>
+								<div className="project-image">
+									{project.image ? (
+										<img
+											src={project.image}
+											alt={project.title}
+											className="project-image-content"
+										/>
+									) : (
+										<span className="image-placeholder">
+											Project Image
+										</span>
+									)}
+								</div>
+								<div className="project-details">
+									<div className="project-icon-container">
+										{project.icon} {/* Render the icon */}
+									</div>
+									<h3>{project.title}</h3>
+									<p>{project.description}</p>
+									<div className="project-skills">
+										{project.skills.map((skill, index) => (
+											<span
+												key={index}
+												className="skill-tag"
+											>
+												{skill}
+											</span>
+										))}
+									</div>
+									<a
+										href={project.link}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="project-link"
+									>
+										<Eye className="view-icon" /> View
+										Project
+									</a>
+								</div>
+							</motion.div>
+						))}
+					</div>
+				</motion.div>
+
+				{/* More Projects Button */}
+				<motion.div
+					className="more-projects-button-container"
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ delay: 2, duration: 1 }} // Delay to show after projects
+				>
+					<a
+						href="https://github.com/AshutoshPanwar" // Replace with your GitHub URL
+						target="_blank"
+						rel="noopener noreferrer"
+						className="more-projects-button"
+					>
+						<Github className="github-icon" /> More Projects on
+						GitHub
+					</a>
+				</motion.div>
+				{/* Blue Ribon */}
+				<section className="intro-section">
+					<div className="intro-content">
+						<h1 className="intro-heading">
+							HAVE AN IDEA?{" "}
+							<span className="highlight">
+								Let’s bring it to life— because Great projects
+								don’t happen by chance. they’re built with
+								vision.{" "}
+							</span>
+							LET'S CREATE
+							<span className="highlight">
+								{" "}
+								something remarkable!
+							</span>
+						</h1>
+					</div>
+				</section>
+			</motion.section>
+		</>
 	);
 };
 

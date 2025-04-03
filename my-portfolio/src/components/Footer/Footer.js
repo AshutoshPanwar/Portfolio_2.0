@@ -7,38 +7,38 @@ const Footer = () => {
 		<footer className="footer">
 			{/* Email on the left */}
 			<div className="footer-email">
-				<p>ashutosh.panwar@example.com</p>
+				<p>Made with ❤️ by Ashutosh Panwar</p>
 			</div>
 
 			{/* Logo in the center */}
-			<div className="footer-logo">
+			{/* <div className="footer-logo">
 				<img src="/images/logo.png" alt="Logo" className="logo-img" />
-			</div>
+			</div> */}
 
 			{/* Social media links on the right */}
-			<div className="footer-social">
+			{/* <div className="footer-social">
 				<a
 					href="https://twitter.com"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<FaTwitter className="footer-icon" /> {/* Twitter icon */}
+					<FaTwitter className="footer-icon" />
 				</a>
 				<a
 					href="https://linkedin.com"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<FaLinkedin className="footer-icon" /> {/* LinkedIn icon */}
+					<FaLinkedin className="footer-icon" /> 
 				</a>
 				<a
 					href="https://github.com"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<FaGithub className="footer-icon" /> {/* GitHub icon */}
+					<FaGithub className="footer-icon" />
 				</a>
-			</div>
+			</div> */}
 		</footer>
 	);
 };

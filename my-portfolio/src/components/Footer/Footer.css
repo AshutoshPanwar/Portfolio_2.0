@@ -1,12 +1,12 @@
 /* Footer.css */
 .footer {
-	background-color: #1a1a1a; /* Dark black background */
+	background-color: black; /* Dark black background */
 	color: white;
-	padding: 1rem 2rem;
-	display: flex;
+	padding: 1rem 4rem;
+	/* display: flex; */
 	justify-content: space-between; /* Space between email, logo, and social links */
 	align-items: center;
-	position: fixed; /* Fixed footer */
+	position: relative; /* Fixed footer */
 	bottom: 0;
 	left: 0;
 	width: 100%;
@@ -17,7 +17,8 @@
 
 .footer-email p {
 	margin: 0;
-	font-size: 1rem;
+	font-size: 1.5rem;
+	text-align: center;
 }
 
 .footer-logo .logo-img {

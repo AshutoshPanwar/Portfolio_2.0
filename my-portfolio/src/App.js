@@ -28,8 +28,7 @@ function App() {
 					{/* Contact page */}
 				</Routes>
 				{/* <TalkComponent /> */}
-				{/* <Temp /> */}
-				{/* <Footer /> */}
+				<Footer />
 			</div>
 		</Router>
 	);

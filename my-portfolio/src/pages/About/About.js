@@ -248,6 +248,72 @@ const AboutSection = () => {
 							</p>
 						</motion.div>
 					</motion.div>
+
+					{/* My Mission Section */}
+					<motion.div
+						className="my-mission-container"
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ delay: 1.6, duration: 1 }}
+					>
+						{/* Left Side - Bold Text */}
+						<motion.div
+							className="my-mission-left"
+							initial={{ opacity: 0, x: -50 }}
+							animate={{ opacity: 1, x: 0 }}
+							transition={{ delay: 1.8, duration: 1 }}
+						>
+							<h2>Beyond Data & Code</h2>
+						</motion.div>
+
+						{/* Right Side - Paragraph */}
+						<motion.div
+							className="my-mission-right"
+							initial={{ opacity: 0, x: 50 }}
+							animate={{ opacity: 1, x: 0 }}
+							transition={{ delay: 1.8, duration: 1 }}
+						>
+							<p>
+								Beyond the realm of{" "}
+								<strong>data and algorithms</strong>, I am
+								captivated by the complexities of{" "}
+								<strong>human nature</strong>. Just as I decode
+								patterns in data, I thrive on{" "}
+								<strong>
+									unraveling the intricacies of thought,
+									ambition, and success
+								</strong>
+								.
+							</p>
+							<p>
+								I believe that{" "}
+								<strong>
+									understanding people is just as powerful as
+									understanding numbers
+								</strong>
+								. Whether through{" "}
+								<strong>thought-provoking books</strong>, deep
+								conversations, or self-reflection, I constantly
+								seek{" "}
+								<strong>
+									new perspectives that challenge and refine
+									my worldview
+								</strong>
+								.
+							</p>
+							<p>
+								To me,{" "}
+								<strong>
+									growth is more than progress—it’s a
+									relentless pursuit of excellence
+								</strong>
+								. Every challenge is a puzzle waiting to be
+								solved, every experience a lesson waiting to be
+								learned. I embrace the unknown, knowing that the
+								greatest insights often lie beyond the obvious.
+							</p>
+						</motion.div>
+					</motion.div>
 				</motion.div>
 			</motion.section>
 		</motion.div>
