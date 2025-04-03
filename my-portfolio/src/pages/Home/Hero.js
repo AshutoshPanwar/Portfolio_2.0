@@ -215,10 +215,10 @@ const Hero = () => {
 					<p>
 						From exploring{" "}
 						<strong>Python, SQL, and machine learning</strong> to
-						diving deep into
-						<strong>AI and analytics</strong>, I am constantly
-						evolving, learning, and building. I believe that data
-						science isn’t just about crunching numbers—it’s about
+						diving deep into <strong>AI and analytics</strong>, I am
+						constantly evolving, learning, and building. I believe
+						that data science isn’t just about crunching
+						numbers—it’s about
 						<strong>
 							{" "}
 							solving real-world problems, predicting the future,
