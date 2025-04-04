@@ -4,6 +4,7 @@ import { FaPython, FaChartLine, FaRobot, FaDatabase } from "react-icons/fa"; // 
 import "./Hero.css"; // Ensure you create a corresponding CSS file
 import Prj from "../../components/Project-Home/Prj";
 import Form from "../../components/Form/Form";
+import Edu from "../../components/Education/Edu";
 
 const Hero = () => {
 	const about_button = () => {
@@ -412,6 +413,7 @@ const Hero = () => {
 				</div>
 			</motion.section>
 			<Prj />
+			<Edu />
 			<Form />
 		</>
 	);

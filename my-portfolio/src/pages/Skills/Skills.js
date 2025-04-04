@@ -10,6 +10,7 @@ import "./Skills.css"; // Import the CSS file
 import Hobbies from "../../components/Hobbies/Hobbies";
 import Certificate from "../../components/Certf/Certificate";
 import Skill from "../../components/skl/Skill";
+import Edu from "../../components/Education/Edu";
 
 const Skills = () => {
 	return (
@@ -36,7 +37,7 @@ const Skills = () => {
 					</motion.div>
 				</motion.section>
 			</div>
-
+			<Edu />
 			<Skill />
 			<Certificate />
 			<Hobbies />

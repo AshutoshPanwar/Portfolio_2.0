@@ -1,0 +1,166 @@
+/* Education and Awards Section */
+.edu-awards-section {
+	background-color: #000; /* Match Hero Section background */
+	color: #fff; /* White text */
+	padding: clamp(40px, 8vh, 80px) clamp(20px, 4vw, 40px);
+}
+
+/* Left Column */
+.edu-left-column {
+	flex: 1; /* Allow the left column to grow */
+}
+
+/* Right Column */
+.edu-right-column {
+	flex: 1; /* Allow the right column to grow */
+}
+
+/* Headline */
+.edu-headline {
+	font-size: clamp(2.5rem, 6vw, 5rem); /* Responsive font size */
+	font-weight: bold;
+	text-align: left;
+	margin-bottom: clamp(0.5rem, 1vh, 1rem); /* Responsive margin */
+}
+
+/* Description */
+.edu-description {
+	font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive font size */
+	color: #ccc; /* Light gray color for description */
+	text-align: left; /* Left-align the description */
+	line-height: 1.5; /* Improve readability */
+}
+
+/* Gradient Text */
+.edu-gradient-text {
+	color: transparent; /* Make text transparent */
+	-webkit-text-stroke: 2px #fff; /* White outline for hollow effect */
+	background: none; /* Remove gradient background */
+}
+
+/* Focus Text */
+.focus-text {
+	color: #ffffff; /* Blue color for highlighted text */
+	font-weight: 500;
+}
+
+/* Education Heading Container */
+.edu-heading-container {
+	display: flex; /* Use flexbox for layout */
+	justify-content: space-between; /* Space between columns */
+	align-items: start; /* Align items to the top */
+	padding: clamp(1rem, 2vw, 2rem) clamp(2.5rem, 5vw, 5rem); /* Responsive padding */
+	gap: clamp(2rem, 4vw, 4rem); /* Responsive gap */
+}
+
+/* Cards Container */
+.edu-cards-container {
+	display: flex; /* Use flexbox for layout */
+	justify-content: center; /* Center-align cards */
+	flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+	gap: 2rem; /* Space between cards */
+	margin-top: 2rem; /* Space above cards */
+}
+
+/* Card Styles */
+.edu-card {
+	background-color: #1a1a1a; /* Dark background for cards */
+	border: 2px solid #fff; /* White border around cards */
+	border-radius: 8px; /* Rounded corners */
+	padding: 30px; /* Increased padding inside cards */
+	text-align: center; /* Center-align text */
+	width: 350px; /* Fixed width for cards */
+	height: 350px; /* Fixed height for cards to ensure symmetry */
+	display: flex; /* Use flexbox for content alignment */
+	flex-direction: column; /* Stack content vertically */
+	justify-content: space-between; /* Space out content evenly */
+	transition: transform 0.3s; /* Smooth scaling effect */
+}
+
+.edu-card:hover {
+	transform: scale(1.05); /* Scale up on hover */
+}
+
+.graduation {
+	background-color: #2563eb;
+}
+
+.leetcode {
+	background-color: rgb(226, 124, 0);
+}
+
+.hackerank {
+	background-color: #18b418;
+}
+
+/* Card Icon */
+.edu-card-icon {
+	font-size: 3rem; /* Increased icon size */
+	color: #ffffff; /* Blue color for icons */
+	margin-bottom: 10px; /* Space below icon */
+	display: flex; /* Use flexbox for alignment */
+	justify-content: center; /* Center-align horizontally */
+	align-items: center; /* Center-align vertically */
+	width: 100%;
+}
+
+/* Card Title */
+.edu-card-title {
+	font-size: 1.8rem; /* Increased title font size */
+	font-weight: bold; /* Bold title */
+	margin: 0.5rem 0; /* Margin above and below title */
+}
+
+/* Card Subtitle */
+.edu-card-subtitle {
+	font-size: 1.2rem; /* Subtitle font size */
+	color: #ffffff; /* Light gray color for subtitle */
+	margin-bottom: 1rem; /* Space below subtitle */
+}
+
+/* Card Button */
+.edu-card-button {
+	background-color: #ffffff00; /* Button color */
+	color: #fff; /* White text */
+	padding: 10px 20px; /* Padding for button */
+	border: none; /* No border */
+	border: 2px solid rgb(255, 255, 255);
+	border-radius: 5px; /* Rounded corners */
+	text-decoration: none; /* No underline */
+	font-size: 1rem; /* Button font size */
+	transition: background-color 0.3s; /* Smooth background color change */
+}
+
+.edu-card-button:hover {
+	background-color: #ffffff; /* Darker blue on hover */
+	color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.edu-headline {
+		font-size: clamp(5rem, 6vw, 5rem);
+	}
+	.edu-heading-container {
+		flex-direction: column; /* Stack columns vertically on smaller screens */
+		align-items: center; /* Center-align items */
+		text-align: center; /* Center-align text */
+		padding: 1rem;
+	}
+
+	.edu-cards-container {
+		flex-direction: column; /* Stack cards vertically on smaller screens */
+		align-items: center; /* Center-align cards */
+	}
+
+	.edu-card {
+		width: 90%; /* Full width on smaller screens */
+		height: auto; /* Allow height to adjust on smaller screens */
+	}
+}
+
+@media (max-width: 480px) {
+	.edu-headline {
+		font-size: clamp(2.5rem, 6vw, 5rem);
+	}
+}
