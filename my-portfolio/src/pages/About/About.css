@@ -21,10 +21,10 @@
 	text-transform: uppercase;
 	background: linear-gradient(
 		45deg,
-		#0033ff,
-		#7200ff,
 		#d400ff,
-		#ff0099
+		#ff00a6,
+		/* Ultra Magenta */ #ff007f,
+		/* Cyberpunk Pink */ #440055
 	); /* Blue to Purple Gradient */
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
