@@ -5,6 +5,19 @@ import "./Projects.css"; // Import the CSS file
 import tedTalksImage from "../../Assets/Images/Ted_Talk.png";
 import Portfolio1 from "../../Assets/Images/Portfolio_1.png";
 
+const introVariants = {
+	hidden: { opacity: 0, y: 20 },
+	visible: { opacity: 1, y: 0, transition: { duration: 1.5 } },
+};
+
+const highlightVariants = {
+	initial: { backgroundPosition: "0% 50%" },
+	animate: {
+		backgroundPosition: "100% 50%",
+		transition: { duration: 2, repeat: Infinity, repeatType: "reverse" },
+	},
+};
+
 const Projects = () => {
 	const projects = [
 		{
@@ -173,24 +186,38 @@ const Projects = () => {
 						GitHub
 					</a>
 				</motion.div>
-				{/* Blue Ribon */}
-				<section className="intro-section">
+				<motion.section
+					className="intro-section"
+					initial="hidden"
+					animate="visible"
+					variants={introVariants}
+				>
 					<div className="intro-content">
 						<h1 className="intro-heading">
 							HAVE AN IDEA?{" "}
-							<span className="highlight">
+							<motion.span
+								className="highlight"
+								variants={highlightVariants}
+								initial="initial"
+								animate="animate"
+							>
 								Let’s bring it to life— because Great projects
 								don’t happen by chance. they’re built with
 								vision.{" "}
-							</span>
+							</motion.span>
 							LET'S CREATE
-							<span className="highlight">
+							<motion.span
+								className="highlight"
+								variants={highlightVariants}
+								initial="initial"
+								animate="animate"
+							>
 								{" "}
 								something remarkable!
-							</span>
+							</motion.span>
 						</h1>
 					</div>
-				</section>
+				</motion.section>
 			</motion.section>
 		</>
 	);

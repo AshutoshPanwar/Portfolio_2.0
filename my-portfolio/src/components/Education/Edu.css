@@ -64,8 +64,8 @@
 
 /* Card Styles */
 .edu-card {
-	background-color: #1a1a1a; /* Dark background for cards */
-	border: 2px solid #fff; /* White border around cards */
+	background-color: #000000; /* Dark background for cards */
+	border: 2px solid #ccc; /* White border around cards */
 	border-radius: 8px; /* Rounded corners */
 	padding: 30px; /* Increased padding inside cards */
 	text-align: center; /* Center-align text */
@@ -80,9 +80,9 @@
 .edu-card:hover {
 	transform: scale(1.05); /* Scale up on hover */
 }
-
+/* 
 .graduation {
-	background-color: #2563eb;
+	background-color: #2564eb;
 }
 
 .leetcode {
@@ -91,7 +91,7 @@
 
 .hackerank {
 	background-color: #18b418;
-}
+} */
 
 /* Card Icon */
 .edu-card-icon {

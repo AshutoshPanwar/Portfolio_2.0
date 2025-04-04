@@ -326,6 +326,8 @@ const Hero = () => {
 				</div>
 			</section>
 
+			<Edu />
+
 			{/* Skill Section */}
 			<motion.section
 				className="skills-section"
@@ -412,8 +414,8 @@ const Hero = () => {
 					</motion.button>
 				</div>
 			</motion.section>
+
 			<Prj />
-			<Edu />
 			<Form />
 		</>
 	);
